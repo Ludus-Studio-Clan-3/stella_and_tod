@@ -1,3 +1,8 @@
+<!--
+SPDX-FileCopyrightText: Judah Matheka
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+
 # StoryQuest: Stella and the Threads of Dawn
 
 **A contemplative, story-driven adventure game about the power of memory, stories, and connection.**

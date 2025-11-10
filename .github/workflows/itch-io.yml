@@ -1,10 +1,11 @@
 # SPDX-FileCopyrightText: The Threadbare Authors
 # SPDX-License-Identifier: MPL-2.0
-name: godot-ci
+name: "Publish to Itch.io"
 
 on:
-  push:
-    branches: [main]
+  # push:
+  #   branches: [main]
+  workflow_dispatch: # enable manual trigger
 
 env:
   EXPORT_NAME: modded-platformer-demo
