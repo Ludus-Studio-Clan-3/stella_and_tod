@@ -1,0 +1,64 @@
+name: godot-ci
+
+on:
+  push:
+    branches: [ main ]
+
+env:
+  EXPORT_NAME: modded-platformer-demo
+  GODOT_VERSION: 4.4.1
+
+jobs:
+  export-web:
+    name: Web Export
+    runs-on: ubuntu-latest
+    container:
+      image: barichello/godot-ci:4.4.1
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Cache Godot export templates
+        uses: actions/cache@v4
+        with:
+          path: ~/.local/share/godot/export_templates
+          key: godot-templates-${{ env.GODOT_VERSION }}-${{ runner.os }}-${{ hashFiles('.github/workflows/godot-ci.yml') }}
+
+      - name: Setup Godot and export templates
+        uses: chickensoft-games/setup-godot@v2
+        with:
+          version: ${{ env.GODOT_VERSION }}
+          use-dotnet: false
+          include-templates: true
+
+      - name: Install Dependencies
+        run: apt-get update && apt-get install -y rsync
+
+      - name: Debug- list export templates
+        run: |
+          echo "Templates dir:"
+          ls -la "$HOME/.local/share/godot/export_templates" || true
+          ls -la "$HOME/.local/share/godot/export_templates/${GODOT_VERSION}.stable" || true
+
+      - name: Build Web Export
+        run: |
+          mkdir -p build/web
+          godot -v --headless --export-release "Web" build/web/index.html
+      
+      - name: Debug- show build output
+        run: ls -la build/web || true
+        
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: web
+          path: project/build/web
+
+      - name: Publish to itch.io
+        uses: KikimoraGames/itch-publish@v0.0.3
+        with:
+          butlerAPIKey: ${{ secrets.ITCHIO_TOKEN }}
+          itchUsername: judahsan
+          itchGameId: stella-and-the-threads-of-dawn
+          buildChannel: web
+          gameData: build/web
