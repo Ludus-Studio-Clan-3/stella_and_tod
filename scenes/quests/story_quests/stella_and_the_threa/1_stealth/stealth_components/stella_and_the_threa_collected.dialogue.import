@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://babj483jrhip6"
+path="res://.godot/imported/stella_and_the_threa_collected.dialogue-e6798fb80e0a3f3739c33d636760e849.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/stella_and_the_threa/1_stealth/stealth_components/stella_and_the_threa_collected.dialogue"
+dest_files=["res://.godot/imported/stella_and_the_threa_collected.dialogue-e6798fb80e0a3f3739c33d636760e849.tres"]
+
+[params]
+
+defaults=true
