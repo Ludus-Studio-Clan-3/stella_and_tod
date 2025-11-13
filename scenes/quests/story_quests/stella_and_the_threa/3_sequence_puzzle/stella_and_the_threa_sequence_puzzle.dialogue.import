@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dc184s6t7ml57"
+path="res://.godot/imported/stella_and_the_threa_sequence_puzzle.dialogue-81243d6e9bc42059f601fd480a231b0a.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/stella_and_the_threa/3_sequence_puzzle/stella_and_the_threa_sequence_puzzle.dialogue"
+dest_files=["res://.godot/imported/stella_and_the_threa_sequence_puzzle.dialogue-81243d6e9bc42059f601fd480a231b0a.tres"]
+
+[params]
+
+defaults=true
