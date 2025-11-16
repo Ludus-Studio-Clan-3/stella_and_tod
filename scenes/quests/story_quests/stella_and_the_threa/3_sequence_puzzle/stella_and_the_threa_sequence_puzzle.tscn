@@ -1,6 +1,7 @@
-[gd_scene load_steps=24 format=4 uid="uid://lgt08q2ot12l"]
+[gd_scene load_steps=25 format=4 uid="uid://lgt08q2ot12l"]
 
 [ext_resource type="TileSet" uid="uid://ch6srsp57hsd8" path="res://scenes/quests/story_quests/stella_and_the_threa/tiles/stella_and_the_threa_exterior_floors.tres" id="1_aepqr"]
+[ext_resource type="PackedScene" uid="uid://co4oxmmoeyqv8" path="res://scenes/game_elements/characters/player/stella.tscn" id="2_6au1l"]
 [ext_resource type="PackedScene" uid="uid://iu2q66clupc6" path="res://scenes/game_elements/characters/player/player.tscn" id="2_doh88"]
 [ext_resource type="SpriteFrames" uid="uid://bi30h72xx2olu" path="res://scenes/quests/story_quests/stella_and_the_threa/player_components/stella_and_the_threa_player.tres" id="3_6au1l"]
 [ext_resource type="Script" uid="uid://c68oh8dtr21ti" path="res://scenes/game_logic/sequence_puzzle.gd" id="4_47pkf"]
@@ -43,7 +44,12 @@ tile_set = ExtResource("1_aepqr")
 [node name="OnTheGround" type="Node2D" parent="."]
 y_sort_enabled = true
 
+[node name="Player2" parent="OnTheGround" instance=ExtResource("2_6au1l")]
+position = Vector2(62, 501.00003)
+scale = Vector2(1.0258447, 1.0258447)
+
 [node name="Player" parent="OnTheGround" instance=ExtResource("2_doh88")]
+visible = false
 position = Vector2(383, 371)
 sprite_frames = ExtResource("3_6au1l")
 
@@ -98,6 +104,7 @@ y_sort_enabled = true
 [node name="HintSign1" parent="OnTheGround/SequencePuzzle/Signs" instance=ExtResource("13_ijjie")]
 position = Vector2(506, 210)
 sprite_frames = ExtResource("14_7tjg6")
+is_solved = true
 
 [node name="HintSign2" parent="OnTheGround/SequencePuzzle/Signs" instance=ExtResource("13_ijjie")]
 position = Vector2(593, 200)
@@ -118,7 +125,7 @@ hint_sign = NodePath("../../Signs/HintSign2")
 [node name="CollectibleItem" parent="OnTheGround" instance=ExtResource("17_m32nj")]
 position = Vector2(861, 282)
 revealed = false
-next_scene = "uid://t2agkf4fjcw8"
+next_scene = "uid://niarks21l4u"
 item = SubResource("Resource_a5tdh")
 collected_dialogue = ExtResource("19_ia7sv")
 dialogue_title = &"well_done"

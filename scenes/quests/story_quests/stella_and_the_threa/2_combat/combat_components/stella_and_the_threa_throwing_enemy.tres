@@ -1,111 +1,88 @@
-[gd_resource type="SpriteFrames" load_steps=25 format=3 uid="uid://d02b7qb3lppsj"]
+[gd_resource type="SpriteFrames" load_steps=21 format=3 uid="uid://dcwig1aneogok"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_j00rr"]
-load_path = "res://.godot/imported/test_throwing_enemy_attack.png-222cf7230d059deb2f62d7a06a14f6e8.ctex"
+[ext_resource type="Texture2D" uid="uid://g3167k5aic3d" path="res://scenes/quests/story_quests/stella_and_the_threa/2_combat/combat_components/test_throwing_enemy_attack.png" id="1_fko7r"]
+[ext_resource type="Texture2D" uid="uid://e021ix0grqhg" path="res://scenes/quests/story_quests/stella_and_the_threa/2_combat/combat_components/test_throwing_enemy_defeated.png" id="2_42mp2"]
+[ext_resource type="Texture2D" uid="uid://myjw4eckd6dg" path="res://scenes/quests/story_quests/stella_and_the_threa/2_combat/combat_components/test_throwing_enemy_idle.png" id="3_dvajh"]
+[ext_resource type="Texture2D" uid="uid://jvhlina0bmti" path="res://scenes/quests/story_quests/stella_and_the_threa/2_combat/combat_components/test_throwing_enemy_walk.png" id="4_qh1a3"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mind4"]
-atlas = SubResource("CompressedTexture2D_j00rr")
+[sub_resource type="AtlasTexture" id="AtlasTexture_m86tw"]
+atlas = ExtResource("1_fko7r")
 region = Rect2(384, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_k4l6k"]
-atlas = SubResource("CompressedTexture2D_j00rr")
+[sub_resource type="AtlasTexture" id="AtlasTexture_f0unb"]
+atlas = ExtResource("1_fko7r")
 region = Rect2(576, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rhel8"]
-atlas = SubResource("CompressedTexture2D_j00rr")
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7gly"]
+atlas = ExtResource("1_fko7r")
 region = Rect2(768, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_berh2"]
-atlas = SubResource("CompressedTexture2D_j00rr")
+[sub_resource type="AtlasTexture" id="AtlasTexture_hewse"]
+atlas = ExtResource("1_fko7r")
 region = Rect2(960, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2682x"]
-atlas = SubResource("CompressedTexture2D_j00rr")
+[sub_resource type="AtlasTexture" id="AtlasTexture_dk5p8"]
+atlas = ExtResource("1_fko7r")
 region = Rect2(0, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_l11hj"]
-atlas = SubResource("CompressedTexture2D_j00rr")
+[sub_resource type="AtlasTexture" id="AtlasTexture_qoc6w"]
+atlas = ExtResource("1_fko7r")
 region = Rect2(192, 0, 192, 192)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1sqtx"]
-load_path = "res://.godot/imported/test_throwing_enemy_defeated.png-3127fa1e66970e5036b00cfc4d77ddd9.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_websu"]
-atlas = SubResource("CompressedTexture2D_1sqtx")
+[sub_resource type="AtlasTexture" id="AtlasTexture_rrsjo"]
+atlas = ExtResource("2_42mp2")
 region = Rect2(0, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_frle3"]
-atlas = SubResource("CompressedTexture2D_1sqtx")
+[sub_resource type="AtlasTexture" id="AtlasTexture_41842"]
+atlas = ExtResource("2_42mp2")
 region = Rect2(192, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_int2m"]
-atlas = SubResource("CompressedTexture2D_1sqtx")
+[sub_resource type="AtlasTexture" id="AtlasTexture_uhuyy"]
+atlas = ExtResource("2_42mp2")
 region = Rect2(384, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7p5mt"]
-atlas = SubResource("CompressedTexture2D_1sqtx")
+[sub_resource type="AtlasTexture" id="AtlasTexture_715r2"]
+atlas = ExtResource("2_42mp2")
 region = Rect2(576, 0, 192, 192)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_22ph3"]
-load_path = "res://.godot/imported/test_throwing_enemy_idle.png-990bbd983e1b632077ddc342f4b92c09.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wocwu"]
-atlas = SubResource("CompressedTexture2D_22ph3")
+[sub_resource type="AtlasTexture" id="AtlasTexture_fg5py"]
+atlas = ExtResource("3_dvajh")
 region = Rect2(0, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_koein"]
-atlas = SubResource("CompressedTexture2D_22ph3")
+[sub_resource type="AtlasTexture" id="AtlasTexture_if0h0"]
+atlas = ExtResource("3_dvajh")
 region = Rect2(192, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_43lix"]
-atlas = SubResource("CompressedTexture2D_22ph3")
+[sub_resource type="AtlasTexture" id="AtlasTexture_sk4to"]
+atlas = ExtResource("3_dvajh")
 region = Rect2(384, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_468gl"]
-atlas = SubResource("CompressedTexture2D_22ph3")
-region = Rect2(192, 0, 192, 192)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mhosq"]
-load_path = "res://.godot/imported/test_throwing_enemy_walk.png-ddca788e4bcadadda275afab85aa9cb6.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wt8op"]
-atlas = SubResource("CompressedTexture2D_mhosq")
+[sub_resource type="AtlasTexture" id="AtlasTexture_kofu6"]
+atlas = ExtResource("4_qh1a3")
 region = Rect2(0, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tu8xg"]
-atlas = SubResource("CompressedTexture2D_mhosq")
+[sub_resource type="AtlasTexture" id="AtlasTexture_17g8q"]
+atlas = ExtResource("4_qh1a3")
 region = Rect2(192, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rddrd"]
-atlas = SubResource("CompressedTexture2D_mhosq")
-region = Rect2(384, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_72inp"]
-atlas = SubResource("CompressedTexture2D_mhosq")
-region = Rect2(0, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1xyr8"]
-atlas = SubResource("CompressedTexture2D_mhosq")
-region = Rect2(192, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wmnhy"]
-atlas = SubResource("CompressedTexture2D_mhosq")
+[sub_resource type="AtlasTexture" id="AtlasTexture_kxjes"]
+atlas = ExtResource("4_qh1a3")
 region = Rect2(384, 0, 192, 192)
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mind4")
+"texture": SubResource("AtlasTexture_m86tw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_k4l6k")
+"texture": SubResource("AtlasTexture_f0unb")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rhel8")
+"texture": SubResource("AtlasTexture_t7gly")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_berh2")
+"texture": SubResource("AtlasTexture_hewse")
 }],
 "loop": false,
 "name": &"attack",
@@ -113,16 +90,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2682x")
+"texture": SubResource("AtlasTexture_dk5p8")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_l11hj")
+"texture": SubResource("AtlasTexture_qoc6w")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2682x")
+"texture": SubResource("AtlasTexture_dk5p8")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_l11hj")
+"texture": SubResource("AtlasTexture_qoc6w")
 }],
 "loop": false,
 "name": &"attack anticipation",
@@ -130,16 +107,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_websu")
+"texture": SubResource("AtlasTexture_rrsjo")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_frle3")
+"texture": SubResource("AtlasTexture_41842")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_int2m")
+"texture": SubResource("AtlasTexture_uhuyy")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7p5mt")
+"texture": SubResource("AtlasTexture_715r2")
 }],
 "loop": false,
 "name": &"defeated",
@@ -147,28 +124,28 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wocwu")
+"texture": SubResource("AtlasTexture_fg5py")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wocwu")
+"texture": SubResource("AtlasTexture_if0h0")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wocwu")
+"texture": SubResource("AtlasTexture_sk4to")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_koein")
+"texture": SubResource("AtlasTexture_fg5py")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_43lix")
+"texture": SubResource("AtlasTexture_if0h0")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_43lix")
+"texture": SubResource("AtlasTexture_sk4to")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_43lix")
+"texture": SubResource("AtlasTexture_fg5py")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_468gl")
+"texture": SubResource("AtlasTexture_if0h0")
 }],
 "loop": true,
 "name": &"idle",
@@ -176,22 +153,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wt8op")
+"texture": SubResource("AtlasTexture_kofu6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tu8xg")
+"texture": SubResource("AtlasTexture_17g8q")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rddrd")
+"texture": SubResource("AtlasTexture_kxjes")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_72inp")
+"texture": SubResource("AtlasTexture_kofu6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1xyr8")
+"texture": SubResource("AtlasTexture_17g8q")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wmnhy")
+"texture": SubResource("AtlasTexture_kxjes")
 }],
 "loop": true,
 "name": &"walk",

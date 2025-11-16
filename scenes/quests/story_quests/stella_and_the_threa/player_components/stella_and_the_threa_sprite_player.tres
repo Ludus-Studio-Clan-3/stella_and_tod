@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=29 format=3 uid="uid://dusvoj1s1uydo"]
+[gd_resource type="SpriteFrames" load_steps=36 format=3 uid="uid://dusvoj1s1uydo"]
 
 [ext_resource type="Texture2D" uid="uid://cej18uaaf1lqr" path="res://scenes/quests/story_quests/stella_and_the_threa/player_components/sprite (3).png" id="2_vsfu6"]
 
@@ -78,6 +78,30 @@ region = Rect2(48, 1584, 16, 24)
 atlas = ExtResource("2_vsfu6")
 region = Rect2(64, 1584, 16, 24)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_crf02"]
+atlas = ExtResource("2_vsfu6")
+region = Rect2(0, 144, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_is40x"]
+atlas = ExtResource("2_vsfu6")
+region = Rect2(16, 144, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fes1"]
+atlas = ExtResource("2_vsfu6")
+region = Rect2(32, 144, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_47n07"]
+atlas = ExtResource("2_vsfu6")
+region = Rect2(48, 144, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_43gqe"]
+atlas = ExtResource("2_vsfu6")
+region = Rect2(64, 144, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dxoms"]
+atlas = ExtResource("2_vsfu6")
+region = Rect2(80, 144, 16, 24)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_4pauu"]
 atlas = ExtResource("2_vsfu6")
 region = Rect2(0, 0, 16, 24)
@@ -93,6 +117,10 @@ region = Rect2(32, 0, 16, 24)
 [sub_resource type="AtlasTexture" id="AtlasTexture_dd2m0"]
 atlas = ExtResource("2_vsfu6")
 region = Rect2(48, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wb508"]
+atlas = ExtResource("2_vsfu6")
+region = Rect2(0, 0, 16, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2m3rv"]
 atlas = ExtResource("2_vsfu6")
@@ -178,11 +206,40 @@ animations = [{
 "texture": SubResource("AtlasTexture_hrwrt")
 }, {
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_tc6a3")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_7r7xk")
+}, {
+"duration": 1.0,
+"texture": null
 }],
-"loop": true,
+"loop": false,
 "name": &"defeated",
-"speed": 5.0
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_crf02")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_is40x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2fes1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_47n07")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_43gqe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dxoms")
+}],
+"loop": false,
+"name": &"happy",
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -200,6 +257,14 @@ animations = [{
 "loop": true,
 "name": &"idle",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wb508")
+}],
+"loop": true,
+"name": &"stand",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,

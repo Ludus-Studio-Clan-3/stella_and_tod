@@ -1,7 +1,64 @@
 # SPDX-FileCopyrightText: The Threadbare Authors
 # SPDX-License-Identifier: MPL-2.0
+
 ~ start
-You've made it to the closing scene!
-This is where you will tie up the loose ends of your story.
-Let's go back to Fray's End so you can return these threads to the Eternal Loom...
+#do animation_player.play(&"stand")
+#do animation_player.animation_finished
+It’s… beautiful.
+The sky is whole again.
+
+Every thread we restored…
+every story we brought back to life…
+they’re all glowing above me now.
+
+I didn’t realize how heavy the silence had become
+until the stars began to sing again.
+
+All those forgotten memories…
+all those fading voices…
+they’re shining, together,
+as if thanking us for remembering them.
+
+I can finally breathe.
+do animation_player.play(&"walk_in")
+do animation_player.animation_finished
+
+Maybe I’m not a hero.
+Maybe I’m just a girl who refused to let the night fall apart.
+
+But… I’m proud.
+Proud of what we’ve mended.
+Proud of what we’ve protected.
+
+do animation_player.play(&"happy")
+do animation_player.animation_finished
+do animation_player.play(&"stand")
+do animation_player.animation_finished
+
+The Threads of Dawn are strong once more.
+And the sky… feels warm again.
+do animation_player.play(&"happy")
+do animation_player.animation_finished
+do animation_player.play(&"stand")
+do animation_player.animation_finished
+
+I think it’s time to go home.
+Back to my quiet life.
+Back to the people I love.
+
+But I’ll never look at the stars the same way again.
+do animation_player.play(&"happy")
+do animation_player.animation_finished
+do animation_player.play(&"stand")
+do animation_player.animation_finished
+
+Whenever I feel lost,  
+I’ll remember this journey…  
+and the light we brought back.
+
+Goodbye… and thank you.  
+For walking this path with me.
+do animation_player.play(&"walk_out")
+#do animation_player.animation_finished
+
 => END
