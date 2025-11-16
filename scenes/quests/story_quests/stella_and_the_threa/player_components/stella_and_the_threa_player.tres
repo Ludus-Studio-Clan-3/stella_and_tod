@@ -1,7 +1,6 @@
 [gd_resource type="SpriteFrames" load_steps=24 format=3 uid="uid://bi30h72xx2olu"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b2x01"]
-load_path = "res://.godot/imported/test_player_attack_01.png-5dfb8a1855a44995fe25b227c1da33d1.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yg72c"]
 atlas = SubResource("CompressedTexture2D_b2x01")
@@ -20,7 +19,6 @@ atlas = SubResource("CompressedTexture2D_b2x01")
 region = Rect2(576, 0, 192, 192)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_43mpf"]
-load_path = "res://.godot/imported/test_player_attack_02.png-ff18273b38ab1cd122367dbb4a20f9f9.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gjf71"]
 atlas = SubResource("CompressedTexture2D_43mpf")
@@ -39,7 +37,6 @@ atlas = SubResource("CompressedTexture2D_43mpf")
 region = Rect2(576, 0, 192, 192)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_g5asc"]
-load_path = "res://.godot/imported/test_player_defeated.png-9ff92810db8579a2d2e5424fa6c89b78.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cu6lk"]
 atlas = SubResource("CompressedTexture2D_g5asc")
@@ -50,7 +47,6 @@ atlas = SubResource("CompressedTexture2D_g5asc")
 region = Rect2(192, 0, 192, 192)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_47v8h"]
-load_path = "res://.godot/imported/test_player_idle.png-999f3566a67f3f1cd431de84042a1ac9.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gwwl8"]
 atlas = SubResource("CompressedTexture2D_47v8h")
@@ -73,7 +69,6 @@ atlas = SubResource("CompressedTexture2D_47v8h")
 region = Rect2(0, 0, 192, 192)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_q7yg7"]
-load_path = "res://.godot/imported/test_player_walk.png-5cfeaf7230d9b5b4ba49b02560e16305.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_28wor"]
 atlas = SubResource("CompressedTexture2D_q7yg7")
