@@ -497,8 +497,6 @@ scale = Vector2(3.640619, 3.640619)
 sprite_frames = ExtResource("4_0v0ug")
 animation = &"idle"
 autoplay = "idle"
-frame = 1
-frame_progress = 0.5121487
 offset = Vector2(-0.34551048, -6.7109604)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="OnTheGround"]
@@ -560,11 +558,11 @@ position = Vector2(324.00003, 318)
 scale = Vector2(0.8920896, 0.82097715)
 
 [node name="Tree11" parent="Trees" instance=ExtResource("11_17gi0")]
-position = Vector2(450.00003, 360.00003)
+position = Vector2(417, 289)
 scale = Vector2(0.8920896, 0.82097715)
 
 [node name="Tree12" parent="Trees" instance=ExtResource("11_17gi0")]
-position = Vector2(367.00003, 406)
+position = Vector2(408.00003, 409)
 scale = Vector2(0.8920896, 0.82097715)
 
 [node name="Tree13" parent="Trees" instance=ExtResource("11_17gi0")]
