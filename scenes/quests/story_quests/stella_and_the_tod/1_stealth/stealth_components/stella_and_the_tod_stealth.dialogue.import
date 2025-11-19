@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dwkaraullj6f4"
+path="res://.godot/imported/stella_and_the_tod_stealth.dialogue-a4f101a8628441aa62f7b3ef70518930.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/stella_and_the_tod/1_stealth/stealth_components/stella_and_the_tod_stealth.dialogue"
+dest_files=["res://.godot/imported/stella_and_the_tod_stealth.dialogue-a4f101a8628441aa62f7b3ef70518930.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://ckf1rkwscb12i"
+path="res://.godot/imported/stella_and_the_tod_outro.dialogue-c57f13ff72b3e19b95a008dc5321fd4e.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/stella_and_the_tod/4_outro/outro_components/stella_and_the_tod_outro.dialogue"
+dest_files=["res://.godot/imported/stella_and_the_tod_outro.dialogue-c57f13ff72b3e19b95a008dc5321fd4e.tres"]
+
+[params]
+
+defaults=true

@@ -79,7 +79,7 @@ folder_colors={
 "res://scenes/quests/lore_quests/": "purple",
 "res://scenes/quests/story_quests/": "green",
 "res://scenes/quests/story_quests/NO_EDIT/": "yellow",
-"res://scenes/quests/story_quests/stella_and_the_threa/": "teal"
+"res://scenes/quests/story_quests/stella_and_the_tod/": "teal"
 }
 
 [global_group]
