@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bh4yntg0q3urw"
+path="res://.godot/imported/stella_and_the_tod_intro.dialogue-b109df62b251c7e8fc8ce64a3e1f3da8.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/stella_and_the_tod/0_intro/intro_components/stella_and_the_tod_intro.dialogue"
+dest_files=["res://.godot/imported/stella_and_the_tod_intro.dialogue-b109df62b251c7e8fc8ce64a3e1f3da8.tres"]
+
+[params]
+
+defaults=true

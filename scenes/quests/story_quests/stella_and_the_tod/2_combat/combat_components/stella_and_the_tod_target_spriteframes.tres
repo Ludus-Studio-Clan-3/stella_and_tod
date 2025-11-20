@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://xnbffce5wt11"]
+
+[ext_resource type="Texture2D" uid="uid://cu40rsa81jess" path="res://scenes/quests/story_quests/stella_and_the_tod/2_combat/combat_components/test_target.png" id="1_wj8mn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bf6s7"]
+atlas = ExtResource("1_wj8mn")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axfpe"]
+atlas = ExtResource("1_wj8mn")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iskw0"]
+atlas = ExtResource("1_wj8mn")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jq8m5"]
+atlas = ExtResource("1_wj8mn")
+region = Rect2(0, 0, 64, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bf6s7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axfpe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iskw0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jq8m5")
+}],
+"loop": true,
+"name": &"filling",
+"speed": 10.0
+}]

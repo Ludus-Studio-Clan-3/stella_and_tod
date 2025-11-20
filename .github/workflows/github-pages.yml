@@ -1,14 +1,14 @@
 # SPDX-FileCopyrightText: The Threadbare Authors
 # SPDX-License-Identifier: MPL-2.0
 name: "Publish to GitHub Pages"
-on:
-  delete:
-  workflow_dispatch:
-  workflow_run:
-    workflows:
-      - "Build and Export Game"
-    types:
-      - completed
+# on:
+#   delete:
+#   workflow_dispatch:
+#   workflow_run:
+#     workflows:
+#       - "Build and Export Game"
+#     types:
+#       - completed
 
 # Cancel any ongoing previous run if the job is re-triggered
 concurrency:

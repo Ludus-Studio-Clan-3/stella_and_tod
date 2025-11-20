@@ -1,0 +1,18 @@
+[gd_resource type="SpriteFrames" load_steps=3 format=3 uid="uid://c26ubeia1nx31"]
+
+[ext_resource type="Texture2D" uid="uid://c0wxfh5bmoo2v" path="res://scenes/quests/story_quests/stella_and_the_tod/2_combat/combat_components/test_projectile.png" id="1_y0law"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xhoay"]
+atlas = ExtResource("1_y0law")
+region = Rect2(0, 0, 64, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xhoay")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
