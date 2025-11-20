@@ -1,6 +1,6 @@
 [gd_scene load_steps=25 format=4 uid="uid://lgt08q2ot12l"]
 
-[ext_resource type="TileSet" uid="uid://ch6srsp57hsd8" path="res://scenes/quests/story_quests/stella_and_the_tod/tiles/stella_and_the_threa_exterior_floors.tres" id="1_aepqr"]
+[ext_resource type="TileSet" uid="uid://ch6srsp57hsd8" path="res://scenes/quests/story_quests/stella_and_the_tod/tiles/stella_and_the_tod_exterior_floors.tres" id="1_aepqr"]
 [ext_resource type="PackedScene" uid="uid://co4oxmmoeyqv8" path="res://scenes/game_elements/characters/player/stella.tscn" id="2_6au1l"]
 [ext_resource type="PackedScene" uid="uid://iu2q66clupc6" path="res://scenes/game_elements/characters/player/player.tscn" id="2_doh88"]
 [ext_resource type="SpriteFrames" uid="uid://bi30h72xx2olu" path="res://scenes/quests/story_quests/stella_and_the_tod/player_components/stella_and_the_tod_player.tres" id="3_6au1l"]

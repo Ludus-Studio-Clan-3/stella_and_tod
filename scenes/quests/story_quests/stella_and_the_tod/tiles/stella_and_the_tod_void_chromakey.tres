@@ -1,9 +1,9 @@
 [gd_resource type="TileSet" load_steps=3 format=3 uid="uid://kxtt4iseeb06"]
 
-[ext_resource type="Texture2D" uid="uid://d0156jkhip32" path="res://assets/first_party/tiles/Void_Tiles_Chromakey.png" id="1_bk1ms"]
+[ext_resource type="Texture2D" uid="uid://d0156jkhip32" path="res://assets/first_party/tiles/Void_Tiles_Chromakey.png" id="1_brwp6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_egg5o"]
-texture = ExtResource("1_bk1ms")
+texture = ExtResource("1_brwp6")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/terrain_set = 0

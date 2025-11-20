@@ -1,14 +1,14 @@
 [gd_resource type="TileSet" load_steps=7 format=3 uid="uid://cgp311w5y1gjf"]
 
-[ext_resource type="Texture2D" uid="uid://bbclkccipxec2" path="res://assets/first_party/rocks/RockWater_Struck.png" id="1_rmwn8"]
-[ext_resource type="Texture2D" uid="uid://bvgio1b8la3bg" path="res://assets/first_party/rocks/RockWater_Idle.png" id="2_11ax0"]
-[ext_resource type="Texture2D" uid="uid://bempo48hxjacy" path="res://assets/first_party/rocks/Rock_Struck.png" id="3_t2yfg"]
+[ext_resource type="Texture2D" uid="uid://bbclkccipxec2" path="res://assets/first_party/rocks/RockWater_Struck.png" id="1_tm71f"]
+[ext_resource type="Texture2D" uid="uid://bvgio1b8la3bg" path="res://assets/first_party/rocks/RockWater_Idle.png" id="2_0m6sr"]
+[ext_resource type="Texture2D" uid="uid://bempo48hxjacy" path="res://assets/first_party/rocks/Rock_Struck.png" id="3_531nm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nhm2p"]
-texture = ExtResource("1_rmwn8")
+texture = ExtResource("1_tm71f")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tisuc"]
-texture = ExtResource("2_11ax0")
+texture = ExtResource("2_0m6sr")
 4:3/0 = 0
 2:3/0 = 0
 3:3/0 = 0
@@ -138,7 +138,7 @@ texture = ExtResource("2_11ax0")
 60:4/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_txwre"]
-texture = ExtResource("3_t2yfg")
+texture = ExtResource("3_531nm")
 texture_region_size = Vector2i(64, 64)
 10:2/0 = 0
 11:2/0 = 0
