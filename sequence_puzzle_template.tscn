@@ -1,0 +1,1046 @@
+[gd_scene load_steps=77 format=4 uid="uid://c1e62j7dhmi1u"]
+
+[ext_resource type="Texture2D" uid="uid://lg5dl13njsg3" path="res://assets/first_party/tiles/Grass_And_Sand_Tiles.png" id="1_c0vk0"]
+[ext_resource type="Texture2D" uid="uid://pkm6smjl8861" path="res://assets/first_party/tiles/Grass_Tiles_Light.png" id="2_qnkg6"]
+[ext_resource type="Texture2D" uid="uid://dcq6v7mx3h1fl" path="res://assets/first_party/tiles/Dirt_Tiles.png" id="3_5wtjd"]
+[ext_resource type="PackedScene" uid="uid://iu2q66clupc6" path="res://scenes/game_elements/characters/player/player.tscn" id="4_sb47w"]
+[ext_resource type="Script" uid="uid://c68oh8dtr21ti" path="res://scenes/game_logic/sequence_puzzle.gd" id="5_8bpod"]
+[ext_resource type="PackedScene" uid="uid://b8sok264erfoc" path="res://scenes/game_elements/props/sequence_puzzle_object/sequence_puzzle_object.tscn" id="6_lcn5m"]
+[ext_resource type="AudioStream" uid="uid://cg57q82pb243w" path="res://assets/third_party/nepalese_hand_bells/handBells-c4.ogg" id="7_ausk8"]
+[ext_resource type="AudioStream" uid="uid://b83x8h0ob5mpq" path="res://assets/third_party/nepalese_hand_bells/handBells-d4.ogg" id="8_248wj"]
+[ext_resource type="AudioStream" uid="uid://cmtiwg2cylmts" path="res://assets/third_party/nepalese_hand_bells/handBells-e4.ogg" id="9_6a8fn"]
+[ext_resource type="AudioStream" uid="uid://8k1hyi4gjae4" path="res://assets/third_party/nepalese_hand_bells/handBells-f4.ogg" id="10_06svx"]
+[ext_resource type="AudioStream" uid="uid://6oahn2ucxxjv" path="res://assets/third_party/nepalese_hand_bells/handBells-g4.ogg" id="11_m0x1b"]
+[ext_resource type="AudioStream" uid="uid://bdboi4ndapqec" path="res://assets/third_party/nepalese_hand_bells/handBells-a4.ogg" id="12_n1stk"]
+[ext_resource type="PackedScene" uid="uid://be4o3ythda4cu" path="res://scenes/game_elements/props/sequence_puzzle_hint_sign/sequence_puzzle_hint_sign.tscn" id="13_3ccem"]
+[ext_resource type="Script" uid="uid://ccc78coj2b1li" path="res://scenes/game_logic/sequence_puzzle_step.gd" id="14_worn3"]
+[ext_resource type="PackedScene" uid="uid://fuhl3l6gxq5k" path="res://scenes/game_elements/props/collectible_item/collectible_item.tscn" id="15_dailg"]
+[ext_resource type="Script" uid="uid://bgmwplmj3bfls" path="res://scenes/globals/game_state/inventory/inventory_item.gd" id="16_kl5tj"]
+[ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="17_1xn7f"]
+[ext_resource type="PackedScene" uid="uid://covsdqqsd6rsy" path="res://scenes/game_elements/props/sign/sign.tscn" id="18_cfrru"]
+[ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/hud/hud.tscn" id="19_xqjqu"]
+[ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="20_wkecq"]
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_0wfyh"]
+tile_data = PackedInt32Array(0, 1, 0, 65536, 1, 1, 131072, 1, 2, 1, 65537, 0, 65537, 65537, 1, 131073, 65537, 2, 2, 131073, 0, 65538, 131073, 1, 131074, 131073, 2)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_sugp2"]
+tile_data = PackedInt32Array(0, 196609, 0, 65536, 196609, 1, 131072, 196609, 2)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_jyhfs"]
+tile_data = PackedInt32Array(0, 1, 3, 1, 65537, 3, 2, 131073, 3)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_tbgi4"]
+tile_data = PackedInt32Array(0, 327681, 0, 65536, 327681, 1, 131072, 327681, 2, 1, 393217, 0, 65537, 393217, 1, 131073, 393217, 2, 2, 458753, 0, 65538, 458753, 1, 131074, 458753, 2)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_tefeu"]
+tile_data = PackedInt32Array(0, 524289, 0, 65536, 524289, 1, 131072, 524289, 2)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_o6xl0"]
+tile_data = PackedInt32Array(0, 327681, 3, 1, 393217, 3, 2, 458753, 3)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2cj6"]
+texture = ExtResource("1_c0vk0")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 0
+0:0/0/terrains_peering_bit/right_side = 0
+0:0/0/terrains_peering_bit/bottom_side = 0
+1:0/0 = 0
+1:0/0/terrain_set = 0
+1:0/0/terrain = 0
+1:0/0/terrains_peering_bit/right_side = 0
+1:0/0/terrains_peering_bit/bottom_side = 0
+1:0/0/terrains_peering_bit/left_side = 0
+2:0/0 = 0
+2:0/0/terrain_set = 0
+2:0/0/terrain = 0
+2:0/0/terrains_peering_bit/bottom_side = 0
+2:0/0/terrains_peering_bit/left_side = 0
+3:0/0 = 0
+3:0/0/terrain_set = 0
+3:0/0/terrain = 0
+3:0/0/terrains_peering_bit/bottom_side = 0
+4:0/0 = 0
+5:0/0 = 0
+5:0/0/terrain_set = 0
+5:0/0/terrain = 1
+5:0/0/terrains_peering_bit/right_side = 1
+5:0/0/terrains_peering_bit/bottom_side = 1
+6:0/0 = 0
+6:0/0/terrain_set = 0
+6:0/0/terrain = 1
+6:0/0/terrains_peering_bit/right_side = 1
+6:0/0/terrains_peering_bit/bottom_side = 1
+6:0/0/terrains_peering_bit/left_side = 1
+7:0/0 = 0
+7:0/0/terrain_set = 0
+7:0/0/terrain = 1
+7:0/0/terrains_peering_bit/bottom_side = 1
+7:0/0/terrains_peering_bit/left_side = 1
+8:0/0 = 0
+8:0/0/terrain_set = 0
+8:0/0/terrain = 1
+8:0/0/terrains_peering_bit/bottom_side = 1
+9:0/0 = 0
+0:1/0 = 0
+0:1/0/terrain_set = 0
+0:1/0/terrain = 0
+0:1/0/terrains_peering_bit/right_side = 0
+0:1/0/terrains_peering_bit/bottom_side = 0
+0:1/0/terrains_peering_bit/top_side = 0
+1:1/0 = 0
+1:1/0/terrain_set = 0
+1:1/0/terrain = 0
+1:1/0/terrains_peering_bit/right_side = 0
+1:1/0/terrains_peering_bit/bottom_side = 0
+1:1/0/terrains_peering_bit/left_side = 0
+1:1/0/terrains_peering_bit/top_side = 0
+2:1/0 = 0
+2:1/0/terrain_set = 0
+2:1/0/terrain = 0
+2:1/0/terrains_peering_bit/bottom_side = 0
+2:1/0/terrains_peering_bit/left_side = 0
+2:1/0/terrains_peering_bit/top_side = 0
+3:1/0 = 0
+3:1/0/terrain_set = 0
+3:1/0/terrain = 0
+3:1/0/terrains_peering_bit/bottom_side = 0
+3:1/0/terrains_peering_bit/top_side = 0
+5:1/0 = 0
+5:1/0/terrain_set = 0
+5:1/0/terrain = 1
+5:1/0/terrains_peering_bit/right_side = 1
+5:1/0/terrains_peering_bit/bottom_side = 1
+5:1/0/terrains_peering_bit/top_side = 1
+6:1/0 = 0
+6:1/0/terrain_set = 0
+6:1/0/terrain = 1
+6:1/0/terrains_peering_bit/right_side = 1
+6:1/0/terrains_peering_bit/bottom_side = 1
+6:1/0/terrains_peering_bit/left_side = 1
+6:1/0/terrains_peering_bit/top_side = 1
+7:1/0 = 0
+7:1/0/terrain_set = 0
+7:1/0/terrain = 1
+7:1/0/terrains_peering_bit/bottom_side = 1
+7:1/0/terrains_peering_bit/left_side = 1
+7:1/0/terrains_peering_bit/top_side = 1
+8:1/0 = 0
+8:1/0/terrain_set = 0
+8:1/0/terrain = 1
+8:1/0/terrains_peering_bit/bottom_side = 1
+8:1/0/terrains_peering_bit/top_side = 1
+0:2/0 = 0
+0:2/0/terrain_set = 0
+0:2/0/terrain = 0
+0:2/0/terrains_peering_bit/right_side = 0
+0:2/0/terrains_peering_bit/top_side = 0
+1:2/0 = 0
+1:2/0/terrain_set = 0
+1:2/0/terrain = 0
+1:2/0/terrains_peering_bit/right_side = 0
+1:2/0/terrains_peering_bit/left_side = 0
+1:2/0/terrains_peering_bit/top_side = 0
+2:2/0 = 0
+2:2/0/terrain_set = 0
+2:2/0/terrain = 0
+2:2/0/terrains_peering_bit/left_side = 0
+2:2/0/terrains_peering_bit/top_side = 0
+3:2/0 = 0
+3:2/0/terrain_set = 0
+3:2/0/terrain = 0
+3:2/0/terrains_peering_bit/top_side = 0
+5:2/0 = 0
+5:2/0/terrain_set = 0
+5:2/0/terrain = 1
+5:2/0/terrains_peering_bit/right_side = 1
+5:2/0/terrains_peering_bit/top_side = 1
+6:2/0 = 0
+6:2/0/terrain_set = 0
+6:2/0/terrain = 1
+6:2/0/terrains_peering_bit/right_side = 1
+6:2/0/terrains_peering_bit/left_side = 1
+6:2/0/terrains_peering_bit/top_side = 1
+7:2/0 = 0
+7:2/0/terrain_set = 0
+7:2/0/terrain = 1
+7:2/0/terrains_peering_bit/left_side = 1
+7:2/0/terrains_peering_bit/top_side = 1
+8:2/0 = 0
+8:2/0/terrain_set = 0
+8:2/0/terrain = 1
+8:2/0/terrains_peering_bit/top_side = 1
+0:3/0 = 0
+0:3/0/terrain_set = 0
+0:3/0/terrain = 0
+0:3/0/terrains_peering_bit/right_side = 0
+1:3/0 = 0
+1:3/0/terrain_set = 0
+1:3/0/terrain = 0
+1:3/0/terrains_peering_bit/right_side = 0
+1:3/0/terrains_peering_bit/left_side = 0
+2:3/0 = 0
+2:3/0/terrain_set = 0
+2:3/0/terrain = 0
+2:3/0/terrains_peering_bit/left_side = 0
+3:3/0 = 0
+3:3/0/terrain_set = 0
+3:3/0/terrain = 0
+5:3/0 = 0
+5:3/0/terrain_set = 0
+5:3/0/terrain = 1
+5:3/0/terrains_peering_bit/right_side = 1
+6:3/0 = 0
+6:3/0/terrain_set = 0
+6:3/0/terrain = 1
+6:3/0/terrains_peering_bit/right_side = 1
+6:3/0/terrains_peering_bit/left_side = 1
+7:3/0 = 0
+7:3/0/terrain_set = 0
+7:3/0/terrain = 1
+7:3/0/terrains_peering_bit/left_side = 1
+8:3/0 = 0
+8:3/0/terrain_set = 0
+8:3/0/terrain = 1
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+12:1/0 = 0
+11:1/0 = 0
+10:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d86bs"]
+texture = ExtResource("2_qnkg6")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 2
+0:0/0/terrains_peering_bit/right_side = 2
+0:0/0/terrains_peering_bit/bottom_side = 2
+1:0/0 = 0
+1:0/0/terrain_set = 0
+1:0/0/terrain = 2
+1:0/0/terrains_peering_bit/right_side = 2
+1:0/0/terrains_peering_bit/bottom_side = 2
+1:0/0/terrains_peering_bit/left_side = 2
+2:0/0 = 0
+2:0/0/terrain_set = 0
+2:0/0/terrain = 2
+2:0/0/terrains_peering_bit/bottom_side = 2
+2:0/0/terrains_peering_bit/left_side = 2
+3:0/0 = 0
+3:0/0/terrain_set = 0
+3:0/0/terrain = 2
+3:0/0/terrains_peering_bit/bottom_side = 2
+0:1/0 = 0
+0:1/0/terrain_set = 0
+0:1/0/terrain = 2
+0:1/0/terrains_peering_bit/right_side = 2
+0:1/0/terrains_peering_bit/bottom_side = 2
+0:1/0/terrains_peering_bit/top_side = 2
+1:1/0 = 0
+1:1/0/terrain_set = 0
+1:1/0/terrain = 2
+1:1/0/terrains_peering_bit/right_side = 2
+1:1/0/terrains_peering_bit/bottom_side = 2
+1:1/0/terrains_peering_bit/left_side = 2
+1:1/0/terrains_peering_bit/top_side = 2
+2:1/0 = 0
+2:1/0/terrain_set = 0
+2:1/0/terrain = 2
+2:1/0/terrains_peering_bit/bottom_side = 2
+2:1/0/terrains_peering_bit/left_side = 2
+2:1/0/terrains_peering_bit/top_side = 2
+3:1/0 = 0
+3:1/0/terrain_set = 0
+3:1/0/terrain = 2
+3:1/0/terrains_peering_bit/bottom_side = 2
+3:1/0/terrains_peering_bit/top_side = 2
+0:2/0 = 0
+0:2/0/terrain_set = 0
+0:2/0/terrain = 2
+0:2/0/terrains_peering_bit/right_side = 2
+0:2/0/terrains_peering_bit/top_side = 2
+1:2/0 = 0
+1:2/0/terrain_set = 0
+1:2/0/terrain = 2
+1:2/0/terrains_peering_bit/right_side = 2
+1:2/0/terrains_peering_bit/left_side = 2
+1:2/0/terrains_peering_bit/top_side = 2
+2:2/0 = 0
+2:2/0/terrain_set = 0
+2:2/0/terrain = 2
+2:2/0/terrains_peering_bit/left_side = 2
+2:2/0/terrains_peering_bit/top_side = 2
+3:2/0 = 0
+3:2/0/terrain_set = 0
+3:2/0/terrain = 2
+3:2/0/terrains_peering_bit/top_side = 2
+0:3/0 = 0
+0:3/0/terrain_set = 0
+0:3/0/terrain = 2
+0:3/0/terrains_peering_bit/right_side = 2
+1:3/0 = 0
+1:3/0/terrain_set = 0
+1:3/0/terrain = 2
+1:3/0/terrains_peering_bit/right_side = 2
+1:3/0/terrains_peering_bit/left_side = 2
+2:3/0 = 0
+2:3/0/terrain_set = 0
+2:3/0/terrain = 2
+2:3/0/terrains_peering_bit/left_side = 2
+3:3/0 = 0
+3:3/0/terrain_set = 0
+3:3/0/terrain = 2
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2yjra"]
+texture = ExtResource("3_5wtjd")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 3
+0:0/0/terrains_peering_bit/right_side = 3
+0:0/0/terrains_peering_bit/bottom_side = 3
+1:0/0 = 0
+1:0/0/terrain_set = 0
+1:0/0/terrain = 3
+1:0/0/terrains_peering_bit/right_side = 3
+1:0/0/terrains_peering_bit/bottom_side = 3
+1:0/0/terrains_peering_bit/left_side = 3
+2:0/0 = 0
+2:0/0/terrain_set = 0
+2:0/0/terrain = 3
+2:0/0/terrains_peering_bit/bottom_side = 3
+2:0/0/terrains_peering_bit/left_side = 3
+3:0/0 = 0
+3:0/0/terrain_set = 0
+3:0/0/terrain = 3
+3:0/0/terrains_peering_bit/bottom_side = 3
+0:1/0 = 0
+0:1/0/terrain_set = 0
+0:1/0/terrain = 3
+0:1/0/terrains_peering_bit/right_side = 3
+0:1/0/terrains_peering_bit/bottom_side = 3
+0:1/0/terrains_peering_bit/top_side = 3
+1:1/0 = 0
+1:1/0/terrain_set = 0
+1:1/0/terrain = 3
+1:1/0/terrains_peering_bit/right_side = 3
+1:1/0/terrains_peering_bit/bottom_side = 3
+1:1/0/terrains_peering_bit/left_side = 3
+1:1/0/terrains_peering_bit/top_side = 3
+2:1/0 = 0
+2:1/0/terrain_set = 0
+2:1/0/terrain = 3
+2:1/0/terrains_peering_bit/bottom_side = 3
+2:1/0/terrains_peering_bit/left_side = 3
+2:1/0/terrains_peering_bit/top_side = 3
+3:1/0 = 0
+3:1/0/terrain_set = 0
+3:1/0/terrain = 3
+3:1/0/terrains_peering_bit/bottom_side = 3
+3:1/0/terrains_peering_bit/top_side = 3
+0:2/0 = 0
+0:2/0/terrain_set = 0
+0:2/0/terrain = 3
+0:2/0/terrains_peering_bit/right_side = 3
+0:2/0/terrains_peering_bit/top_side = 3
+1:2/0 = 0
+1:2/0/terrain_set = 0
+1:2/0/terrain = 3
+1:2/0/terrains_peering_bit/right_side = 3
+1:2/0/terrains_peering_bit/left_side = 3
+1:2/0/terrains_peering_bit/top_side = 3
+2:2/0 = 0
+2:2/0/terrain_set = 0
+2:2/0/terrain = 3
+2:2/0/terrains_peering_bit/left_side = 3
+2:2/0/terrains_peering_bit/top_side = 3
+3:2/0 = 0
+3:2/0/terrain_set = 0
+3:2/0/terrain = 3
+3:2/0/terrains_peering_bit/top_side = 3
+0:3/0 = 0
+0:3/0/terrain_set = 0
+0:3/0/terrain = 3
+0:3/0/terrains_peering_bit/right_side = 3
+1:3/0 = 0
+1:3/0/terrain_set = 0
+1:3/0/terrain = 3
+1:3/0/terrains_peering_bit/right_side = 3
+1:3/0/terrains_peering_bit/left_side = 3
+2:3/0 = 0
+2:3/0/terrain_set = 0
+2:3/0/terrain = 3
+2:3/0/terrains_peering_bit/left_side = 3
+3:3/0 = 0
+3:3/0/terrain_set = 0
+3:3/0/terrain = 3
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_wq6vi"]
+tile_size = Vector2i(64, 64)
+occlusion_layer_0/light_mask = 1
+physics_layer_0/collision_layer = 16
+physics_layer_0/collision_mask = 0
+physics_layer_0/collision_priority = 100.0
+physics_layer_1/collision_layer = 8
+physics_layer_1/collision_mask = 0
+physics_layer_2/collision_layer = 512
+physics_layer_2/collision_mask = 0
+terrain_set_0/mode = 2
+terrain_set_0/terrain_0/name = "Grass"
+terrain_set_0/terrain_0/color = Color(0.115781, 0.264059, 0.205218, 1)
+terrain_set_0/terrain_1/name = "Sand"
+terrain_set_0/terrain_1/color = Color(0.515604, 0.484286, 0.253851, 1)
+terrain_set_0/terrain_2/name = "LightGrass"
+terrain_set_0/terrain_2/color = Color(0.50077, 0.823591, 0.69626, 1)
+terrain_set_0/terrain_3/name = "Dirt"
+terrain_set_0/terrain_3/color = Color(0.435821, 0.294287, 0.167531, 1)
+sources/1 = SubResource("TileSetAtlasSource_h2cj6")
+sources/5 = SubResource("TileSetAtlasSource_d86bs")
+sources/6 = SubResource("TileSetAtlasSource_2yjra")
+pattern_0 = SubResource("TileMapPattern_0wfyh")
+pattern_1 = SubResource("TileMapPattern_sugp2")
+pattern_2 = SubResource("TileMapPattern_jyhfs")
+pattern_3 = SubResource("TileMapPattern_tbgi4")
+pattern_4 = SubResource("TileMapPattern_tefeu")
+pattern_5 = SubResource("TileMapPattern_o6xl0")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t2fu2"]
+load_path = "res://.godot/imported/test_player_attack_01.png-5dfb8a1855a44995fe25b227c1da33d1.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yg72c"]
+atlas = SubResource("CompressedTexture2D_t2fu2")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydd7j"]
+atlas = SubResource("CompressedTexture2D_t2fu2")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8lfs"]
+atlas = SubResource("CompressedTexture2D_t2fu2")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_scyt1"]
+atlas = SubResource("CompressedTexture2D_t2fu2")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wxfdl"]
+load_path = "res://.godot/imported/test_player_attack_02.png-ff18273b38ab1cd122367dbb4a20f9f9.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjf71"]
+atlas = SubResource("CompressedTexture2D_wxfdl")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eyp3i"]
+atlas = SubResource("CompressedTexture2D_wxfdl")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nw7ra"]
+atlas = SubResource("CompressedTexture2D_wxfdl")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3yb8r"]
+atlas = SubResource("CompressedTexture2D_wxfdl")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_y74sw"]
+load_path = "res://.godot/imported/test_player_defeated.png-9ff92810db8579a2d2e5424fa6c89b78.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cu6lk"]
+atlas = SubResource("CompressedTexture2D_y74sw")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_icahe"]
+atlas = SubResource("CompressedTexture2D_y74sw")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2mor0"]
+load_path = "res://.godot/imported/test_player_idle.png-999f3566a67f3f1cd431de84042a1ac9.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwwl8"]
+atlas = SubResource("CompressedTexture2D_2mor0")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6uyh"]
+atlas = SubResource("CompressedTexture2D_2mor0")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0myta"]
+atlas = SubResource("CompressedTexture2D_2mor0")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbvnd"]
+atlas = SubResource("CompressedTexture2D_2mor0")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1iol"]
+atlas = SubResource("CompressedTexture2D_2mor0")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8sgqg"]
+load_path = "res://.godot/imported/test_player_walk.png-5cfeaf7230d9b5b4ba49b02560e16305.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28wor"]
+atlas = SubResource("CompressedTexture2D_8sgqg")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7nl6p"]
+atlas = SubResource("CompressedTexture2D_8sgqg")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ctslx"]
+atlas = SubResource("CompressedTexture2D_8sgqg")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y5voc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yg72c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ydd7j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f8lfs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_scyt1")
+}],
+"loop": true,
+"name": &"attack_01",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gjf71")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eyp3i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nw7ra")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3yb8r")
+}],
+"loop": true,
+"name": &"attack_02",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cu6lk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_icahe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cu6lk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_icahe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cu6lk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_icahe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cu6lk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_icahe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cu6lk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_icahe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cu6lk")
+}],
+"loop": true,
+"name": &"defeated",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gwwl8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gwwl8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gwwl8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i6uyh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0myta")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0myta")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0myta")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbvnd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1iol")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1iol")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_28wor")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7nl6p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ctslx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_28wor")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7nl6p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ctslx")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f0aqj"]
+load_path = "res://.godot/imported/test_object.png-d0192b2166d6402e04a9dcd92b413b06.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_riqxt"]
+atlas = SubResource("CompressedTexture2D_f0aqj")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rsmxy"]
+atlas = SubResource("CompressedTexture2D_f0aqj")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mfero"]
+atlas = SubResource("CompressedTexture2D_f0aqj")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_628fm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_riqxt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_riqxt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rsmxy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mfero")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rsmxy")
+}],
+"loop": true,
+"name": &"struck",
+"speed": 10.0
+}]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_oseqp"]
+load_path = "res://.godot/imported/test_sign.png-32bacc38f057b5c0752c5781571498ec.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kbib7"]
+atlas = SubResource("CompressedTexture2D_oseqp")
+region = Rect2(128, 0, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gye5d"]
+atlas = SubResource("CompressedTexture2D_oseqp")
+region = Rect2(0, 0, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0tgm"]
+atlas = SubResource("CompressedTexture2D_oseqp")
+region = Rect2(256, 0, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j7cdm"]
+atlas = SubResource("CompressedTexture2D_oseqp")
+region = Rect2(384, 0, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ksfh"]
+atlas = SubResource("CompressedTexture2D_oseqp")
+region = Rect2(512, 0, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j0g8y"]
+atlas = SubResource("CompressedTexture2D_oseqp")
+region = Rect2(640, 0, 128, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d1qmm"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_kbib7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gye5d")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_p0tgm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gye5d")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_j7cdm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gye5d")
+}],
+"loop": false,
+"name": &"hint",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gye5d")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ksfh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j0g8y")
+}],
+"loop": true,
+"name": &"solved",
+"speed": 2.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ksoan"]
+atlas = SubResource("CompressedTexture2D_oseqp")
+region = Rect2(384, 0, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xp7h6"]
+atlas = SubResource("CompressedTexture2D_oseqp")
+region = Rect2(0, 0, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpjtx"]
+atlas = SubResource("CompressedTexture2D_oseqp")
+region = Rect2(256, 0, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_80m25"]
+atlas = SubResource("CompressedTexture2D_oseqp")
+region = Rect2(128, 0, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3efiq"]
+atlas = SubResource("CompressedTexture2D_oseqp")
+region = Rect2(512, 0, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8yxg"]
+atlas = SubResource("CompressedTexture2D_oseqp")
+region = Rect2(640, 0, 128, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hoq2a"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_ksoan")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xp7h6")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_cpjtx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xp7h6")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_80m25")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xp7h6")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_cpjtx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xp7h6")
+}],
+"loop": false,
+"name": &"hint",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xp7h6")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3efiq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b8yxg")
+}],
+"loop": true,
+"name": &"solved",
+"speed": 2.0
+}]
+
+[sub_resource type="Resource" id="Resource_3k2l1"]
+script = ExtResource("16_kl5tj")
+type = 2
+metadata/_custom_type_script = "uid://bgmwplmj3bfls"
+
+[sub_resource type="Resource" id="Resource_drr5v"]
+script = ExtResource("17_1xn7f")
+using_states = PackedStringArray()
+titles = {
+"start": "3",
+"well_done": "9"
+}
+character_names = PackedStringArray()
+first_title = "2"
+lines = {
+"1": {
+&"id": "1",
+&"next_id": "2",
+&"type": ""
+},
+"10": {
+&"id": "10",
+&"next_id": "11",
+&"text": "Using what you've learned so far, what kind of challenge can you create here? Have fun!",
+&"type": "dialogue"
+},
+"11": {
+&"id": "11",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"12": {
+&"id": "12",
+&"next_id": "13",
+&"type": ""
+},
+"13": {
+&"id": "13",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"2": {
+&"id": "2",
+&"next_id": "3",
+&"type": "title"
+},
+"3": {
+&"id": "3",
+&"next_id": "4",
+&"text": "This scene includes objects that the player must tap in a particular sequence, and signs with clues on them.",
+&"type": "dialogue"
+},
+"4": {
+&"id": "4",
+&"next_id": "5",
+&"text": "Select a \"SequencePuzzleStep\" node and change the array in the \"Sequence\" field.",
+&"type": "dialogue"
+},
+"5": {
+&"id": "5",
+&"next_id": "6",
+&"text": "The first melody is set to yellow, green, blue. This means that you should tap those objects in that order.",
+&"type": "dialogue"
+},
+"6": {
+&"id": "6",
+&"next_id": "7",
+&"text": "Can you guess the second sequence without looking at the Inspector?",
+&"type": "dialogue"
+},
+"7": {
+&"id": "7",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"8": {
+&"id": "8",
+&"next_id": "9",
+&"type": "title"
+},
+"9": {
+&"id": "9",
+&"next_id": "10",
+&"text": "Well done! You can add more steps to the puzzle. Just remember to add them to the \"SequencePuzzle\" node, and add a new hint sign for each one.",
+&"type": "dialogue"
+}
+}
+raw_text = "# SPDX-FileCopyrightText: The Threadbare Authors
+# SPDX-License-Identifier: MPL-2.0
+~ start
+This scene includes objects that the player must tap in a particular sequence, and signs with clues on them.
+Select a \"SequencePuzzleStep\" node and change the array in the \"Sequence\" field.
+The first melody is set to yellow, green, blue. This means that you should tap those objects in that order.
+Can you guess the second sequence without looking at the Inspector?
+=> END
+~ well_done
+Well done! You can add more steps to the puzzle. Just remember to add them to the \"SequencePuzzle\" node, and add a new hint sign for each one.
+Using what you've learned so far, what kind of challenge can you create here? Have fun!
+=> END
+"
+metadata/dialogue_manager_version = "3.7.1"
+
+[node name="SequencePuzzleTemplate" type="Node2D"]
+
+[node name="TileMapLayers" type="Node2D" parent="."]
+
+[node name="Grass" type="TileMapLayer" parent="TileMapLayers"]
+tile_map_data = PackedByteArray("AAANAAcAAQABAAEAAAANAAYAAQABAAEAAAANAAUAAQABAAEAAAANAAQAAQABAAEAAAANAAMAAQABAAEAAAANAAIAAQABAAEAAAANAAEAAQABAAEAAAAMAAcAAQABAAEAAAAMAAYAAQABAAEAAAAMAAUAAQABAAEAAAAMAAQAAQABAAEAAAAMAAMAAQABAAEAAAAMAAIAAQABAAEAAAAMAAEAAQABAAEAAAALAAcAAQABAAEAAAALAAYAAQABAAEAAAALAAUAAQABAAEAAAALAAQAAQABAAEAAAALAAMAAQABAAEAAAALAAIAAQABAAEAAAALAAEAAQABAAEAAAAKAAcAAQABAAEAAAAKAAYAAQABAAEAAAAKAAUAAQABAAEAAAAKAAQAAQABAAEAAAAKAAMAAQABAAEAAAAKAAIAAQABAAEAAAAJAAcAAQABAAEAAAAJAAYAAQABAAEAAAAJAAUAAQABAAEAAAAJAAQAAQABAAEAAAAJAAMAAQABAAEAAAAJAAIAAQABAAEAAAAIAAcAAQABAAEAAAAIAAYAAQABAAEAAAAIAAUAAQABAAEAAAAIAAQAAQABAAEAAAAIAAMAAQABAAEAAAAIAAIAAQABAAEAAAAHAAcAAQABAAEAAAAHAAYAAQABAAEAAAAHAAUAAQABAAEAAAAHAAQAAQABAAEAAAAHAAMAAQABAAEAAAAHAAIAAQABAAEAAAAGAAcAAQABAAEAAAAGAAYAAQABAAEAAAAGAAUAAQABAAEAAAAGAAQAAQABAAEAAAAGAAMAAQABAAEAAAAGAAIAAQABAAEAAAAFAAcAAQABAAEAAAAFAAYAAQABAAEAAAAFAAUAAQABAAEAAAAFAAQAAQABAAEAAAAFAAMAAQABAAEAAAAFAAIAAQABAAEAAAAFAAEAAQABAAEAAAAEAAcAAQABAAEAAAAEAAYAAQABAAEAAAAEAAQAAQABAAEAAAAEAAMAAQABAAEAAAAEAAIAAQABAAEAAAAEAAEAAQABAAEAAAADAAQAAQABAAEAAAADAAMAAQABAAEAAAADAAIAAQABAAEAAAADAAEAAQABAAEAAAACAAMAAQABAAEAAAACAAIAAQABAAEAAAACAAEAAQABAAEAAAABAAMAAQABAAEAAAABAAIAAQABAAEAAAABAAEAAQABAAEAAAACAAQAAQABAAEAAAABAAQAAQABAAEAAAAAAAQAAQABAAEAAAAGAAAAAQABAAEAAAAHAAAAAQABAAEAAAAFAAAAAQABAAEAAAAIAAAAAQABAAEAAAAJAAAAAQABAAEAAAALAAAAAQABAAEAAAAMAAAAAQABAAEAAAAKAAAAAQABAAEAAAANAAAAAQABAAEAAAAEAAAAAQABAAEAAAADAAAAAQABAAEAAAACAAAAAQABAAEAAAABAAAAAQABAAEAAAAAAAAAAQABAAEAAAAAAAEAAQABAAEAAAAAAAIAAQABAAEAAAAAAAMAAQABAAEAAAAAAAgAAQABAAEAAAABAAgAAQABAAEAAAACAAgAAQABAAEAAAADAAgAAQABAAEAAAAEAAgAAQABAAEAAAAFAAgAAQABAAEAAAAGAAgAAQABAAEAAAAHAAgAAQABAAEAAAAIAAgAAQABAAEAAAAJAAgAAQABAAEAAAAKAAgAAQABAAEAAAAMAAgAAQABAAEAAAALAAgAAQABAAEAAAANAAgAAQABAAEAAAAOAAgAAQABAAEAAAAOAAcAAQABAAEAAAAOAAYAAQABAAEAAAAOAAUAAQABAAEAAAAOAAQAAQABAAEAAAAOAAMAAQABAAEAAAAOAAIAAQABAAEAAAAOAAEAAQABAAEAAAAOAAAAAQABAAEAAAAAAAUAAQABAAEAAAABAAUAAQABAAEAAAACAAUAAQABAAEAAAADAAUAAQABAAEAAAAEAAUAAQABAAEAAAADAAYAAQABAAEAAAACAAYAAQABAAEAAAABAAYAAQABAAEAAAAAAAYAAQABAAEAAAAAAAcAAQABAAEAAAABAAcAAQABAAEAAAACAAcAAQABAAEAAAADAAcAAQABAAEAAAAGAAEAAQABAAEAAAAHAAEAAQABAAEAAAAIAAEAAQABAAEAAAAJAAEAAQABAAEAAAAKAAEAAQABAAEAAAAPAAkAAQACAAIAAAAPAAgAAQACAAEAAAAPAAcAAQACAAEAAAAPAAYAAQACAAEAAAAPAAUAAQACAAEAAAAPAAQAAQACAAEAAAAPAAMAAQACAAEAAAAPAAIAAQACAAEAAAAPAAEAAQACAAEAAAAPAAAAAQACAAEAAAAPAP//AQACAAAAAAAOAAkAAQABAAIAAAAOAP//AQABAAAAAAANAAkAAQABAAIAAAANAP//AQABAAAAAAAMAAkAAQABAAIAAAAMAP//AQABAAAAAAALAAkAAQABAAIAAAALAP//AQABAAAAAAAKAAkAAQABAAIAAAAKAP//AQABAAAAAAAJAAkAAQABAAIAAAAJAP//AQABAAAAAAAIAAkAAQABAAIAAAAIAP//AQABAAAAAAAHAAkAAQABAAIAAAAHAP//AQABAAAAAAAGAAkAAQABAAIAAAAGAP//AQABAAAAAAAFAAkAAQABAAIAAAAFAP//AQABAAAAAAAEAAkAAQABAAIAAAAEAP//AQABAAAAAAADAAkAAQABAAIAAAADAP//AQABAAAAAAACAAkAAQABAAIAAAACAP//AQABAAAAAAABAAkAAQABAAIAAAABAP//AQABAAAAAAAAAAkAAQABAAIAAAAAAP//AQABAAAAAAD//wkAAQAAAAIAAAD//wgAAQAAAAEAAAD//wcAAQAAAAEAAAD//wYAAQAAAAEAAAD//wUAAQAAAAEAAAD//wQAAQAAAAEAAAD//wMAAQAAAAEAAAD//wIAAQAAAAEAAAD//wEAAQAAAAEAAAD//wAAAQAAAAEAAAD/////AQAAAAAAAAA=")
+tile_set = SubResource("TileSet_wq6vi")
+
+[node name="Sand" type="TileMapLayer" parent="TileMapLayers"]
+tile_map_data = PackedByteArray("AAD//wcAAQAFAAMAAAAAAAcAAQAGAAMAAAABAAcAAQAGAAMAAAACAAcAAQAGAAMAAAADAAcAAQAHAAIAAAADAAYAAQAIAAEAAAADAAUAAQAFAAAAAAAEAAUAAQAGAAMAAAAFAAUAAQAGAAMAAAAGAAUAAQAGAAMAAAAHAAUAAQAGAAMAAAAIAAUAAQAGAAMAAAAJAAUAAQAGAAMAAAAKAAUAAQAGAAMAAAALAAUAAQAHAAIAAAALAAQAAQAFAAAAAAAMAAQAAQAGAAMAAAANAAQAAQAGAAMAAAAOAAQAAQAGAAMAAAAPAAQAAQAHAAMAAAA=")
+tile_set = SubResource("TileSet_wq6vi")
+
+[node name="OnTheGround" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Player" parent="OnTheGround" instance=ExtResource("4_sb47w")]
+position = Vector2(383, 371)
+sprite_frames = SubResource("SpriteFrames_y5voc")
+
+[node name="SequencePuzzle" type="Node2D" parent="OnTheGround"]
+y_sort_enabled = true
+position = Vector2(-1, 0)
+script = ExtResource("5_8bpod")
+metadata/_custom_type_script = "uid://c68oh8dtr21ti"
+
+[node name="Objects" type="Node2D" parent="OnTheGround/SequencePuzzle"]
+y_sort_enabled = true
+position = Vector2(356, 453)
+
+[node name="Blue" parent="OnTheGround/SequencePuzzle/Objects" instance=ExtResource("6_lcn5m")]
+modulate = Color(0, 0.4, 0.6, 1)
+sprite_frames = SubResource("SpriteFrames_628fm")
+audio_stream = ExtResource("7_ausk8")
+
+[node name="Pink" parent="OnTheGround/SequencePuzzle/Objects" instance=ExtResource("6_lcn5m")]
+modulate = Color(0.89, 0.2937, 0.804817, 1)
+position = Vector2(80, -8)
+sprite_frames = SubResource("SpriteFrames_628fm")
+audio_stream = ExtResource("8_248wj")
+
+[node name="Yellow" parent="OnTheGround/SequencePuzzle/Objects" instance=ExtResource("6_lcn5m")]
+modulate = Color(0.89, 0.804817, 0.2937, 1)
+position = Vector2(160, -16)
+sprite_frames = SubResource("SpriteFrames_628fm")
+audio_stream = ExtResource("9_6a8fn")
+
+[node name="Green" parent="OnTheGround/SequencePuzzle/Objects" instance=ExtResource("6_lcn5m")]
+modulate = Color(0.188235, 0.717647, 0, 1)
+position = Vector2(240, -24)
+sprite_frames = SubResource("SpriteFrames_628fm")
+audio_stream = ExtResource("10_06svx")
+
+[node name="Purple" parent="OnTheGround/SequencePuzzle/Objects" instance=ExtResource("6_lcn5m")]
+modulate = Color(0.464066, 0.2937, 0.89, 1)
+position = Vector2(320, -32)
+sprite_frames = SubResource("SpriteFrames_628fm")
+audio_stream = ExtResource("11_m0x1b")
+
+[node name="Red" parent="OnTheGround/SequencePuzzle/Objects" instance=ExtResource("6_lcn5m")]
+modulate = Color(0.89, 0.2937, 0.2937, 1)
+position = Vector2(400, -40)
+sprite_frames = SubResource("SpriteFrames_628fm")
+audio_stream = ExtResource("12_n1stk")
+
+[node name="Signs" type="Node2D" parent="OnTheGround/SequencePuzzle"]
+y_sort_enabled = true
+
+[node name="HintSign1" parent="OnTheGround/SequencePuzzle/Signs" instance=ExtResource("13_3ccem")]
+position = Vector2(506, 210)
+sprite_frames = SubResource("SpriteFrames_d1qmm")
+
+[node name="HintSign2" parent="OnTheGround/SequencePuzzle/Signs" instance=ExtResource("13_3ccem")]
+position = Vector2(593, 200)
+sprite_frames = SubResource("SpriteFrames_hoq2a")
+
+[node name="Steps" type="Node2D" parent="OnTheGround/SequencePuzzle"]
+
+[node name="SequencePuzzleStep1" type="Node2D" parent="OnTheGround/SequencePuzzle/Steps" node_paths=PackedStringArray("sequence", "hint_sign")]
+script = ExtResource("14_worn3")
+sequence = [NodePath("../../Objects/Yellow"), NodePath("../../Objects/Green"), NodePath("../../Objects/Blue")]
+hint_sign = NodePath("../../Signs/HintSign1")
+
+[node name="SequencePuzzleStep2" type="Node2D" parent="OnTheGround/SequencePuzzle/Steps" node_paths=PackedStringArray("sequence", "hint_sign")]
+script = ExtResource("14_worn3")
+sequence = [NodePath("../../Objects/Blue"), NodePath("../../Objects/Green"), NodePath("../../Objects/Yellow"), NodePath("../../Objects/Green")]
+hint_sign = NodePath("../../Signs/HintSign2")
+
+[node name="CollectibleItem" parent="OnTheGround" instance=ExtResource("15_dailg")]
+position = Vector2(861, 282)
+revealed = false
+next_scene = "uid://b3mx1j6cxbg7v"
+item = SubResource("Resource_3k2l1")
+collected_dialogue = SubResource("Resource_drr5v")
+dialogue_title = &"well_done"
+
+[node name="Sign" parent="OnTheGround" instance=ExtResource("18_cfrru")]
+position = Vector2(184, 434)
+direction = 1
+text = "First melody: yellow, green, blue."
+
+[node name="ScreenOverlay" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="." instance=ExtResource("19_xqjqu")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2(1.333, 1.333)
+position_smoothing_enabled = true
+
+[node name="Cinematic" type="Node2D" parent="."]
+script = ExtResource("20_wkecq")
+dialogue = SubResource("Resource_drr5v")
+metadata/_custom_type_script = "uid://x1mxt6bmei2o"
+
+[connection signal="solved" from="OnTheGround/SequencePuzzle" to="OnTheGround/CollectibleItem" method="reveal"]

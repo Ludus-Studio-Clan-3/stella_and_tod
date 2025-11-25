@@ -1,0 +1,32 @@
+# SPDX-FileCopyrightText: The Threadbare Authors
+# SPDX-License-Identifier: MPL-2.0
+
+~ start
+do animation_player.play(&"walk_on")
+do animation_player.animation_finished
+
+I’m home, but the sky feels wrong. Not just dark, but empty.
+I always look for the familiar shapes of Orion...
+But tonight, the stars seem uncertain—their light thin, their edges blurred.
+
+When I check my notebook, the contellations I drew so carefully...
+... they're dissolving right off the paper.
+
+Grandma's words echo now:
+"Stories keep the stars from falling, small one. They are the Threads of Dawn.
+Forget them, and the sky forgets itself."
+
+
+If those threads unravel, the whole night will follow.
+I can’t let the sky come undone.
+
+
+I know where the silence is the heaviest.
+Somewhere out there, hearts are forgetting how to listen.
+I need to find the guardians... and help them remember the song of the stars.
+
+Alright. I have my notebook, my candies, and my courage.
+Time to follow the last light into the unknown.
+
+do animation_player.play(&"walk_off")
+=> END

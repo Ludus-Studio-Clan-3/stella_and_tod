@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://blt44kqshsh7o"
+path="res://.godot/imported/stella_and_the_tod_checkpoint.dialogue-4bd1003bce4369c8b7529179c488bcef.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/stella_and_the_tod/1_stealth/stealth_components/stella_and_the_tod_checkpoint.dialogue"
+dest_files=["res://.godot/imported/stella_and_the_tod_checkpoint.dialogue-4bd1003bce4369c8b7529179c488bcef.tres"]
+
+[params]
+
+defaults=true
