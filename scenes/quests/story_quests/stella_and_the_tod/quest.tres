@@ -4,6 +4,10 @@
 
 [resource]
 script = ExtResource("1_i3cyc")
+status = 1
 title = "Stella and the Threads of Dawn"
+description = "Stella and the Threads of Dawn follows Stella as she discovers the night sky is unraveling: the constellations are losing their shape and dimming because the magical threads of dawn woven from stories and memories are beginning to fray. She must journey across three distant lands where stories are fading to help local guardians remember their ancient tales and reweave the sky's light."
+authors = Array[String](["Wendi", "Akorede Dasilva", "Judah", "Mirana"])
+affiliation = "Endless"
 first_scene = "uid://dywfvoy7dlnaj"
 metadata/_custom_type_script = "uid://dts1hwdy3phin"

@@ -1,8 +1,11 @@
 # SPDX-FileCopyrightText: The Threadbare Authors
 # SPDX-License-Identifier: MPL-2.0
 ~ start
-This simple stealth scene includes guards and a collectible. Use the nodes in the Scene Tree to build a level.
-Notice the tile map is built with multiple layers. This makes it easier to make changes to the environment.
-Click a node, like "Player" or "Guard1" and modify their properties in the Inspector, or add new elements.
-Don't be afraid to think outside the box. (Oh, and remove or replace this text!)
+The Fog-Teller’s valley is carved into jagged stone tonight. Darkness pools between the cliffs and broken rock corridors, turning the rugged maze into shifting silhouettes. Somewhere within its winding crags lies a single silver Thread—a fragment of a story long forgotten.
+
+Your task is simple, yet perilous: navigate the rocky maze, stay hidden, and reclaim the Thread before the watchers of the cliffs detect you. These guardians, shaped from the Fog-Teller’s fading memories, prowl the narrow paths with sharpened senses. If they spot you, the valley resets, and the Thread slips deeper into the dark.
+
+Move quietly. Use the shadows and stone outcrops as cover. Let intuition guide your steps through the labyrinth.
+Find the Thread. Restore the memory. Become unseen.
+
 => END
