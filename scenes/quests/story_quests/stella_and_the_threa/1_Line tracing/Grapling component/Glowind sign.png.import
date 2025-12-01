@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cy20qoau2s5cn"
-path="res://.godot/imported/test_guard_enemy_walk.png-cf9395ef0eeb7e76984bcddf6f0b0598.ctex"
+uid="uid://du5hte20pbsn2"
+path="res://.godot/imported/Glowind sign.png-737830d58e658cd5f0d92adffe27f258.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/quests/story_quests/stella_and_the_threa/1_stealth/stealth_components/test_guard_enemy_walk.png"
-dest_files=["res://.godot/imported/test_guard_enemy_walk.png-cf9395ef0eeb7e76984bcddf6f0b0598.ctex"]
+source_file="res://scenes/quests/story_quests/stella_and_the_threa/1_Line tracing/Grapling component/Glowind sign.png"
+dest_files=["res://.godot/imported/Glowind sign.png-737830d58e658cd5f0d92adffe27f258.ctex"]
 
 [params]
 

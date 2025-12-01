@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dssjwfqjc25xa"
-path="res://.godot/imported/test_guard_enemy_alerted.png-de8ec77c63d082bc5d9e193eabfb55c2.ctex"
+uid="uid://b20xt54404n53"
+path="res://.godot/imported/test_guard_enemy_idle.png-7fc620166cb70ea666e8494dc8115434.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/quests/story_quests/stella_and_the_threa/1_stealth/stealth_components/test_guard_enemy_alerted.png"
-dest_files=["res://.godot/imported/test_guard_enemy_alerted.png-de8ec77c63d082bc5d9e193eabfb55c2.ctex"]
+source_file="res://scenes/quests/story_quests/stella_and_the_threa/1_Line tracing/stealth_components/test_guard_enemy_idle.png"
+dest_files=["res://.godot/imported/test_guard_enemy_idle.png-7fc620166cb70ea666e8494dc8115434.ctex"]
 
 [params]
 

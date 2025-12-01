@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b20xt54404n53"
-path="res://.godot/imported/test_guard_enemy_idle.png-352cbe4de77f58a22cedad97525e1c2b.ctex"
+uid="uid://c35psgctu8rd5"
+path="res://.godot/imported/other glowind sign.png-071f8e1964e494a518c0b81053f3c1e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/quests/story_quests/stella_and_the_threa/1_stealth/stealth_components/test_guard_enemy_idle.png"
-dest_files=["res://.godot/imported/test_guard_enemy_idle.png-352cbe4de77f58a22cedad97525e1c2b.ctex"]
+source_file="res://scenes/quests/story_quests/stella_and_the_threa/1_Line tracing/Grapling component/other glowind sign.png"
+dest_files=["res://.godot/imported/other glowind sign.png-071f8e1964e494a518c0b81053f3c1e9.ctex"]
 
 [params]
 

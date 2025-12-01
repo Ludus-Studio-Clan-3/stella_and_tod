@@ -510,11 +510,11 @@ libraries = {
 [node name="ScreenOverlay" type="CanvasLayer" parent="."]
 
 [node name="Cinematic" type="Node2D" parent="." node_paths=PackedStringArray("animation_player")]
-position = Vector2(176, -57)
+position = Vector2(235, -57)
 script = ExtResource("4_x6ak6")
 dialogue = ExtResource("5_hodai")
 animation_player = NodePath("../OnTheGround/AnimationPlayer")
-next_scene = "uid://5xwu8jn77xj5"
+next_scene = "uid://brx3883i4vvwu"
 metadata/_custom_type_script = "uid://x1mxt6bmei2o"
 
 [node name="Trees" type="Node2D" parent="."]

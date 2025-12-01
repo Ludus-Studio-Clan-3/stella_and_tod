@@ -5,5 +5,7 @@
 [resource]
 script = ExtResource("1_i3cyc")
 title = "Stella and the Threads of Dawn"
+description = "Following her first adventure in Stella and the Missing Star, Stella discovers that though the missing star has been restored, the night sky itself is unraveling. The constellations are losing their shapes, dimming as if their light is being forgotten. Her grandmother tells her that the stars are held in place by invisible “threads of dawn” - woven from the stories and memories people tell about them. When stories are forgotten, those threads begin to fray.
+Determined to mend the sky, Stella embarks on another journey across three distant lands - each representing a place where stories and memory are fading. Guided by curiosity and compassion, she helps local guardians remember their ancient tales, reweaving the threads that hold the stars together."
 first_scene = "uid://dywfvoy7dlnaj"
 metadata/_custom_type_script = "uid://dts1hwdy3phin"

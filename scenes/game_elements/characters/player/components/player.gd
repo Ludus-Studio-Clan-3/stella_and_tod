@@ -10,13 +10,13 @@ signal mode_changed(mode: Mode)
 enum Mode {
 	## Player can explore the world, interact with items and NPCs, but is not
 	## engaged in combat. Combat actions are not available in this mode.
-	COZY,
+	COZY=0,
 	## Player is engaged in combat. Player can use combat actions.
-	FIGHTING,
+	FIGHTING=1,
 	## Player is using the grappling hook.
-	HOOKING,
+	HOOKING=2,
 	## Player can't be controlled anymore.
-	DEFEATED,
+	DEFEATED=3,
 }
 
 ## The animations which must be provided by [member sprite_frames], each with the corresponding
@@ -242,3 +242,15 @@ func defeat(falling: bool = false) -> void:
 
 	await get_tree().create_timer(2.0).timeout
 	SceneSwitcher.reload_with_transition(Transition.Effect.FADE, Transition.Effect.FADE)
+
+
+func change_mode_from_number(mod_number:int) -> void:
+	match mod_number:
+		1:
+			_set_mode(Mode.COZY)
+		2:
+			_set_mode(Mode.FIGHTING)
+		3:
+			_set_mode(Mode.HOOKING)
+		4:
+			_set_mode(Mode.DEFEATED)

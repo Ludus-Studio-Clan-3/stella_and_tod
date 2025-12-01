@@ -16,10 +16,11 @@ collision_mask = 0
 position = Vector2(0, -32)
 texture = ExtResource("1_gcph1")
 
-[node name="HookableArea" type="Area2D" parent="." node_paths=PackedStringArray("anchor_point")]
+[node name="HookableArea" type="Area2D" parent="." node_paths=PackedStringArray("controlled_entity", "anchor_point")]
 collision_layer = 4096
 collision_mask = 0
 script = ExtResource("2_bfd1i")
+controlled_entity = NodePath("..")
 anchor_point = NodePath("Marker2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HookableArea"]

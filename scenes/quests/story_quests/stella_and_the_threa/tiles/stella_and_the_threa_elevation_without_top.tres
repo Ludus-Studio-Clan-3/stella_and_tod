@@ -1,7 +1,7 @@
-[gd_resource type="TileSet" load_steps=18 format=3 uid="uid://dfmgge76lxfaq"]
+[gd_resource type="TileSet" load_steps=18 format=3 uid="uid://dqgu6djvo02wp"]
 
-[ext_resource type="Texture2D" uid="uid://c7oht7wudd8wa" path="res://assets/first_party/tiles/Cliff_Tiles.png" id="1_lfkmr"]
-[ext_resource type="Texture2D" uid="uid://cledckq31klvq" path="res://assets/first_party/tiles/Cliff_Mines_Tiles.png" id="2_nwkjn"]
+[ext_resource type="Texture2D" uid="uid://c7oht7wudd8wa" path="res://assets/first_party/tiles/Cliff_Tiles.png" id="1_lttpl"]
+[ext_resource type="Texture2D" uid="uid://cledckq31klvq" path="res://assets/first_party/tiles/Cliff_Mines_Tiles.png" id="2_e3yqx"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_yc5yt"]
 polygon = PackedVector2Array(-32, -5.08027, -23.7079, -22.0145, -6.77369, -27.0947, 32, -27.0947, 32, 32, -32, 32)
@@ -43,7 +43,7 @@ polygon = PackedVector2Array(-32, -32, 32, -32, 32, 11.2895, -32, 10.725)
 polygon = PackedVector2Array(-32, -0.385544, -26.6025, -16.9639, -19.1244, -25.2715, 0.385544, -28.1447, 19.2772, -23.5181, 25.4459, -17.735, 28.5302, -0.771088, 32, 17.3494, -32, 17.735)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fl2sn"]
-texture = ExtResource("1_lfkmr")
+texture = ExtResource("1_lttpl")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/y_sort_origin = 10
@@ -223,6 +223,7 @@ texture_region_size = Vector2i(64, 64)
 3:5/0/y_sort_origin = -30
 3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 3:5/0/physics_layer_1/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+3:5/0/physics_layer_2/polygon_0/points = PackedVector2Array(-32, -32, -27.09475, 32, 26.53027, 32, 32, -32)
 0:7/0 = 0
 1:7/0 = 0
 2:7/0 = 0
@@ -232,12 +233,11 @@ texture_region_size = Vector2i(64, 64)
 3:4/0/y_sort_origin = 10
 3:4/0/terrain_set = 0
 3:4/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_nwor3")
-3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -16, 0, -32, 32, -16, 32, 32, 24, 32, 24, -8, -24, -8, -24, 32, -32, 32)
 3:4/0/physics_layer_1/polygon_0/points = PackedVector2Array(-32, 10.1605, 32, 10.725, 32, 32, -32, 32)
 3:4/0/terrains_peering_bit/bottom_side = 1
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_spl2i"]
-texture = ExtResource("2_nwkjn")
+texture = ExtResource("2_e3yqx")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, -27.5482, -27.5482, -26.9972, -27.5482, 32, -32, 32)

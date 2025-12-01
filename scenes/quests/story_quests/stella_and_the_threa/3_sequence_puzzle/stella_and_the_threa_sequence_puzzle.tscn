@@ -104,7 +104,6 @@ y_sort_enabled = true
 [node name="HintSign1" parent="OnTheGround/SequencePuzzle/Signs" instance=ExtResource("13_ijjie")]
 position = Vector2(506, 210)
 sprite_frames = ExtResource("14_7tjg6")
-is_solved = true
 
 [node name="HintSign2" parent="OnTheGround/SequencePuzzle/Signs" instance=ExtResource("13_ijjie")]
 position = Vector2(593, 200)
