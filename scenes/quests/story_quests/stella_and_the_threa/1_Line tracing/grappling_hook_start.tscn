@@ -93,7 +93,7 @@ type = 1
 metadata/_custom_type_script = "uid://bgmwplmj3bfls"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f18wf"]
-size = Vector2(259, 265)
+size = Vector2(181.5, 265)
 
 [node name="GrapplingHookStart" type="Node2D"]
 
@@ -155,6 +155,12 @@ position = Vector2(1233, 1192)
 [node name="HookablePin3" parent="OnTheGround/Pins" instance=ExtResource("12_ocaj0")]
 position = Vector2(2023, 549)
 
+[node name="HookablePin5" parent="OnTheGround/Pins" instance=ExtResource("12_ocaj0")]
+position = Vector2(2149, 700)
+
+[node name="HookablePin6" parent="OnTheGround/Pins" instance=ExtResource("12_ocaj0")]
+position = Vector2(2807, 695)
+
 [node name="HookablePin4" parent="OnTheGround/Pins" instance=ExtResource("12_ocaj0")]
 position = Vector2(2968, 544)
 
@@ -171,7 +177,13 @@ position = Vector2(790, 314)
 position = Vector2(1153, 437)
 
 [node name="HookablePin7" parent="OnTheGround/Pins" instance=ExtResource("12_ocaj0")]
-position = Vector2(1879, 1164)
+position = Vector2(2134, 1152)
+
+[node name="HookablePin9" parent="OnTheGround/Pins" instance=ExtResource("12_ocaj0")]
+position = Vector2(2142, 835)
+
+[node name="HookablePin13" parent="OnTheGround/Pins" instance=ExtResource("12_ocaj0")]
+position = Vector2(2141, 956)
 
 [node name="HookableButtons" type="Node2D" parent="OnTheGround"]
 position = Vector2(1152, 412)
@@ -210,7 +222,7 @@ position = Vector2(3279, 518)
 script = ExtResource("16_34w5w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="OnTheGround/Player_mode_changer"]
-position = Vector2(-32, -8.5)
+position = Vector2(83.75, -4)
 shape = SubResource("RectangleShape2D_f18wf")
 
 [node name="Teleporter" parent="." instance=ExtResource("16_u3f6x")]
@@ -260,3 +272,6 @@ text = "Aim"
 [node name="All mystic rocks" type="Node2D" parent="."]
 
 [node name="First_step_enygma" type="Node2D" parent="All mystic rocks"]
+
+[connection signal="body_entered" from="OnTheGround/Player_mode_changer" to="OnTheGround/Player_mode_changer" method="_on_body_entered"]
+[connection signal="body_exited" from="OnTheGround/Player_mode_changer" to="OnTheGround/Player_mode_changer" method="_on_body_exited"]
