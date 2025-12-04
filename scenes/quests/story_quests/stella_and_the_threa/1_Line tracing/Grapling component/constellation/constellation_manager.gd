@@ -173,7 +173,7 @@ func _create_animated_line(a: Vector2, b: Vector2):
 func _on_line_tween_finished(line):
 	print('_on_line_tween_finished')
 	var sfx = AudioStreamPlayer2D.new()
-	#sfx.stream = preload("res://assets/sfx/line.wav")
+	sfx.stream = preload("res://assets/third_party/nepalese_hand_bells/handBells-f4.ogg")
 	add_child(sfx)
 	sfx.play()
 	sfx.connect("finished", Callable(sfx, "queue_free"))

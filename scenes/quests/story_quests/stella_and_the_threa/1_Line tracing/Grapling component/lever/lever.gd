@@ -17,5 +17,6 @@ func _on_body_entered(body):
 		$AnimationPlayer.play("on")
 	emit_signal("lever_activated")
 	if auto_disable_after_use:
-		if $Sprite:
-			$Sprite.modulate = Color(0.5, 0.5, 0.5, 1)
+		pass
+		#if $Sprite2D:
+			#$Sprite2D.modulate = Color(0.5, 0.5, 0.5, 1)

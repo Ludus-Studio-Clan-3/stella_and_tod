@@ -295,7 +295,6 @@ text = "Aim"
 [node name="First_step_enygma" type="Node2D" parent="All mystic rocks"]
 
 [node name="Fog" parent="." instance=ExtResource("16_kbsq0")]
-visible = false
 
 [node name="SkyRoot" type="Node2D" parent="."]
 

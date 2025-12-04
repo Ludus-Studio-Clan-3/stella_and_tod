@@ -1,12 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://bw0y2potqde8l"]
 
 [ext_resource type="Script" uid="uid://dcntt440ja54b" path="res://scenes/quests/story_quests/stella_and_the_threa/1_Line tracing/Grapling component/lever/lever.gd" id="1_1eran"]
-[ext_resource type="Texture2D" uid="uid://uy2acspf6apo" path="res://scenes/quests/story_quests/stella_and_the_threa/1_Line tracing/Grapling component/lever_duplicated_from_hook/components/Lever.png" id="2_af447"]
+[ext_resource type="Texture2D" uid="uid://uy2acspf6apo" path="res://scenes/game_elements/props/lever/components/Lever.png" id="2_af447"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_af447"]
 radius = 66.70832
 
 [node name="Lever" type="Area2D"]
+collision_layer = 4
 script = ExtResource("1_1eran")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
