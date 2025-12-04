@@ -2,26 +2,57 @@ extends Node2D
 
 @export var start_point: Vector2
 @export var end_point: Vector2
-@export var speed: float = 100.0
+@export var speed: float = 200.0
+@export var circle_radius: float = 60.0
+@export var circle_color: Color = Color.WHITE
 
-var line: Line2D
-var progress: float = 0.0
+@export var hand_draw_strength: float = 0.5
+
+var progress := 0.0
+var line_points := []
+var real_start: Vector2
+var real_end: Vector2
+
 
 func _ready():
-	line = Line2D.new()
-	line.width = 4
-	line.default_color = Color(1,1,1,0.95)
-	line.points = [start_point, start_point]
-	add_child(line)
+	var dir = (end_point - start_point).normalized()
+	real_start = start_point + dir * circle_radius
+	real_end   = end_point - dir * circle_radius
+
 
 func _process(delta):
-	if progress >= 1.0:
+	if progress < 1.0:
+		var dist = real_start.distance_to(real_end)
+		progress += speed * delta / dist
+		progress = clamp(progress, 0.0, 1.0)
+
+		var p = real_start.lerp(real_end, progress)
+		line_points.append(p)
+
+	queue_redraw()
+
+
+func _draw():
+	# --- Cicrles ---
+	draw_arc(start_point, circle_radius, 0, TAU, 64, circle_color, 4)
+	draw_arc(end_point, circle_radius, 0, TAU, 64, circle_color, 4)
+
+	if line_points.size() < 2:
 		return
 
-	var total_dist = start_point.distance_to(end_point)
-	progress += speed * delta / total_dist
-	progress = clamp(progress, 0, 1)
+	var noisy_points: Array = []
+	var t = Time.get_ticks_msec() * 0.001
 
-	# compute the line's current pos
-	var current_pos = start_point.lerp(end_point, progress)
-	line.points[1] = current_pos
+	for i in range(line_points.size()):
+		var p = line_points[i]
+
+		var offset = Vector2(
+			sin(t * 3.1 + i * 0.5),
+			cos(t * 2.7 + i * 0.8)
+		) * hand_draw_strength
+
+		noisy_points.append(p + offset)
+
+	# --- Line ---
+	for i in range(noisy_points.size() - 1):
+		draw_line(noisy_points[i], noisy_points[i+1], Color.WHITE, 4, true)
