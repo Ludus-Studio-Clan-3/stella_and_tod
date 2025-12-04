@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://du3l0dkw7ckhn"]
+
+[ext_resource type="Script" uid="uid://0yfsa6wcrnv6" path="res://scenes/quests/story_quests/stella_and_the_threa/1_Line tracing/Grapling component/collect_symbol/collect_symbol.gd" id="1_v8psj"]
+[ext_resource type="Texture2D" uid="uid://du5hte20pbsn2" path="res://scenes/quests/story_quests/stella_and_the_threa/1_Line tracing/Grapling component/Glowind sign.png" id="2_toxsy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a5sak"]
+radius = 82.59692
+
+[node name="CollectSymbol" type="Area2D"]
+collision_layer = 16
+script = ExtResource("1_v8psj")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_toxsy")
+hframes = 2
+vframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 19)
+shape = SubResource("CircleShape2D_a5sak")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

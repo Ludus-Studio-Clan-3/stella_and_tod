@@ -1,5 +1,6 @@
 # SPDX-FileCopyrightText: The Threadbare Authors
 # SPDX-License-Identifier: MPL-2.0
+"""
 @tool
 extends Node2D
 
@@ -49,3 +50,26 @@ func _on_interact_area_interaction_started(_player: Player, _from_right: bool) -
 func toggle(new_val: bool = not is_on) -> void:
 	is_on = new_val
 	toggled.emit(is_on)
+"""
+# res://scripts/Lever.gd
+extends Area2D
+signal lever_activated()
+
+@export var auto_disable_after_use: bool = true
+
+var used: bool = false
+
+func _on_body_entered(body):
+	if used:
+		return
+	if not body or not body.is_in_group("player"):
+		return
+
+	used = true
+	if has_node("AnimationPlayer"):
+		$AnimationPlayer.play("on")
+	emit_signal("lever_activated")
+	if auto_disable_after_use:
+		# visuel désactivé
+		if $Sprite:
+			$Sprite.modulate = Color(0.5, 0.5, 0.5, 1)

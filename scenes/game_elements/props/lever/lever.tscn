@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dt6ivbb8cfxnk"]
 
-[ext_resource type="Script" uid="uid://dpy43oruh42hm" path="res://scenes/game_elements/props/lever/components/lever.gd" id="1_ri4rx"]
-[ext_resource type="Texture2D" uid="uid://uy2acspf6apo" path="res://scenes/game_elements/props/lever/components/Lever.png" id="1_ywgx1"]
+[ext_resource type="Script" uid="uid://dpy43oruh42hm" path="res://scenes/quests/story_quests/stella_and_the_threa/1_Line tracing/Grapling component/lever_duplicated_from_hook/components/lever.gd" id="1_ri4rx"]
+[ext_resource type="Texture2D" uid="uid://uy2acspf6apo" path="res://scenes/quests/story_quests/stella_and_the_threa/1_Line tracing/Grapling component/lever_duplicated_from_hook/components/Lever.png" id="1_ywgx1"]
 [ext_resource type="Script" uid="uid://du8wfijr35r35" path="res://scenes/game_elements/props/interact_area/components/interact_area.gd" id="3_v1ps0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ri4rx"]
