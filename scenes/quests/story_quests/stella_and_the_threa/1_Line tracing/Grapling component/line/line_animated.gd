@@ -2,7 +2,7 @@ extends Node2D
 
 @export var start_point: Vector2
 @export var end_point: Vector2
-@export var speed: float = 0.0
+@export var speed: float = 100.0
 
 var line: Line2D
 var progress: float = 0.0
@@ -22,6 +22,6 @@ func _process(delta):
 	progress += speed * delta / total_dist
 	progress = clamp(progress, 0, 1)
 
-	# Compute the current line position
+	# compute the line's current pos
 	var current_pos = start_point.lerp(end_point, progress)
 	line.points[1] = current_pos

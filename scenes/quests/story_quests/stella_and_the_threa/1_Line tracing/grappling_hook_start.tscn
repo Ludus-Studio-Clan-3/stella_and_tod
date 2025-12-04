@@ -317,19 +317,18 @@ position = Vector2(2688, 432)
 
 [node name="CollectSymbol" parent="CollectSymbols" instance=ExtResource("23_r1u5x")]
 position = Vector2(3326, 560)
-lever_id = 1
 
 [node name="CollectSymbol1" parent="CollectSymbols" instance=ExtResource("23_r1u5x")]
 position = Vector2(2713, 612)
-lever_id = 2
+id = 2
 
 [node name="CollectSymbol2" parent="CollectSymbols" instance=ExtResource("23_r1u5x")]
 position = Vector2(2555, 1205)
-lever_id = 3
+id = 3
 
 [node name="CollectSymbol3" parent="CollectSymbols" instance=ExtResource("23_r1u5x")]
 position = Vector2(1459, 1193)
-lever_id = 4
+id = 4
 
 [node name="ConstellationManager" parent="." instance=ExtResource("25_gfwde")]
 sky_center = Vector2(2500, 750)
