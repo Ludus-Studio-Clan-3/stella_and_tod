@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bw0y2potqde8l"]
+
+[ext_resource type="Script" uid="uid://dcntt440ja54b" path="res://scenes/quests/story_quests/stella_and_the_tod/1_line_tracing/Grapling component/lever/lever.gd" id="1_1eran"]
+[ext_resource type="Texture2D" uid="uid://uy2acspf6apo" path="res://scenes/game_elements/props/lever/components/Lever.png" id="2_af447"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_af447"]
+radius = 66.70832
+
+[node name="Lever" type="Area2D"]
+collision_layer = 4
+script = ExtResource("1_1eran")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_af447")
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_af447")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CollisionShape2D"]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

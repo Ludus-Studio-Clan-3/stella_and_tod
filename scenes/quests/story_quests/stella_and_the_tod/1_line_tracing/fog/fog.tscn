@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3ogyjgse3bgd"]
+
+[ext_resource type="Shader" uid="uid://c8o2mc8hoq8ge" path="res://scenes/quests/story_quests/stella_and_the_tod/1_line_tracing/fog/fog.gdshader" id="1_stshj"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_stshj"]
+noise_type = 3
+frequency = 0.0011
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_pyot1"]
+width = 1280
+height = 720
+noise = SubResource("FastNoiseLite_stshj")
+seamless = true
+seamless_blend_skirt = 0.75
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pyot1"]
+shader = ExtResource("1_stshj")
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_pyot1")
+shader_parameter/density = 0.25
+shader_parameter/intensity = 1.8
+shader_parameter/base_fog = 0.2
+shader_parameter/speed = Vector2(0.02, 0.01)
+
+[node name="Fog" type="ParallaxBackground"]
+layer = 2
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1280, 720)
+
+[node name="ColorRect" type="ColorRect" parent="ParallaxLayer"]
+material = SubResource("ShaderMaterial_pyot1")
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.71037674, 0.97354096, 0.9404054, 1)

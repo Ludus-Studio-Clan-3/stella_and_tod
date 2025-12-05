@@ -1,9 +1,9 @@
 [gd_scene load_steps=38 format=3 uid="uid://co4oxmmoeyqv8"]
 
 [ext_resource type="Script" uid="uid://bwllxup305eib" path="res://scenes/game_elements/characters/player/components/player.gd" id="1_bfbea"]
-[ext_resource type="SpriteFrames" uid="uid://dusvoj1s1uydo" path="res://scenes/quests/story_quests/stella_and_the_threa/player_components/stella_and_the_threa_sprite_player.tres" id="2_bfbea"]
 [ext_resource type="Texture2D" uid="uid://dxaq5piwxqnht" path="res://scenes/game_elements/characters/player/components/dust.png" id="2_nr2vd"]
 [ext_resource type="Script" uid="uid://ciw2w16c38ewq" path="res://scenes/game_elements/characters/player/components/player_dust_particles.gd" id="3_2l1jo"]
+[ext_resource type="SpriteFrames" uid="uid://vwf8e1v8brdp" path="res://scenes/quests/story_quests/NO_EDIT/NO_EDIT_player_components/NO_EDIT_player.tres" id="4_bfbea"]
 [ext_resource type="Script" uid="uid://qro4uo83ba8f" path="res://scenes/game_elements/characters/player/components/player_sprite.gd" id="5_64ghy"]
 [ext_resource type="Script" uid="uid://bpu6jo4kvehlg" path="res://scenes/game_elements/characters/player/components/player_interaction.gd" id="6_36lkt"]
 [ext_resource type="Script" uid="uid://necvar42rnih" path="res://scenes/game_elements/characters/player/components/interact_zone.gd" id="7_tne0g"]
@@ -509,7 +509,6 @@ motion_mode = 1
 wall_min_slide_angle = 0.017453292
 safe_margin = 1.0
 script = ExtResource("1_bfbea")
-sprite_frames = ExtResource("2_bfbea")
 
 [node name="HitBox" type="Area2D" parent="."]
 unique_name_in_owner = true
@@ -538,7 +537,7 @@ script = ExtResource("3_2l1jo")
 unique_name_in_owner = true
 position = Vector2(1, -35.562504)
 scale = Vector2(2.5468752, 2.5468755)
-sprite_frames = ExtResource("2_bfbea")
+sprite_frames = ExtResource("4_bfbea")
 animation = &"idle"
 autoplay = "idle"
 script = ExtResource("5_64ghy")

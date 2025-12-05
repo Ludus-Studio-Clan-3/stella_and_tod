@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cidb76x5gqoj6"]
-
-[ext_resource type="Script" uid="uid://c4rvd1wwi7knt" path="res://scenes/quests/story_quests/stella_and_the_threa/1_Line tracing/Grapling component/line/line_animated.gd" id="1_24dby"]
-
-[node name="LineAnimated" type="Node2D"]
-z_index = 100
-script = ExtResource("1_24dby")
-
-[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
