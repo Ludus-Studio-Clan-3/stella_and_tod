@@ -1,0 +1,55 @@
+# SPDX-FileCopyrightText: The Threadbare Authors
+# SPDX-License-Identifier: MPL-2.0
+
+name: "Publish to Itch.io"
+
+on:
+  workflow_dispatch:   # Manual trigger only
+
+env:
+  EXPORT_NAME: modded-platformer-demo
+  GODOT_VERSION: 4.4.1
+
+jobs:
+  export-web:
+    name: Web Export
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Setup Godot with export templates
+        uses: chickensoft-games/setup-godot@v2
+        with:
+          version: ${{ env.GODOT_VERSION }}
+          include-templates: true
+          use-dotnet: false
+
+      - name: Verify export templates
+        run: |
+          echo "Export templates installed:"
+          ls -R ~/.local/share/godot/export_templates || true
+
+      - name: Build Web Export
+        run: |
+          mkdir -p build/web
+          godot --headless --export-release "Web" build/web/index.html
+
+      - name: Show build output
+        run: ls -la build/web || true
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v5
+        with:
+          name: web
+          path: build/web
+
+      - name: Publish to itch.io
+        uses: KikimoraGames/itch-publish@v0.0.3
+        with:
+          butlerAPIKey: ${{ secrets.ITCHIO_TOKEN }}
+          itchUsername: judahsan
+          itchGameId: stella-and-the-threads-of-dawn
+          buildChannel: web
+          gameData: build/web
