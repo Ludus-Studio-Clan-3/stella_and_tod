@@ -8,15 +8,15 @@ on:
   workflow_dispatch: # enable manual trigger
 
 env:
-  EXPORT_NAME: modded-platformer-demo
-  GODOT_VERSION: 4.4.1
+  EXPORT_NAME: stella-and-the-threads-of-dawn
+  GODOT_VERSION: 4.5
 
 jobs:
   export-web:
     name: Web Export
     runs-on: ubuntu-latest
     container:
-      image: barichello/godot-ci:4.4.1
+      image: barichello/godot-ci:4.5
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -47,6 +47,9 @@ jobs:
         run: |
           mkdir -p build/web
           godot -v --headless --export-release "Web" build/web/index.html
+          # Ensure all files are included
+          echo "Checking web build contents:"
+          find build/web -type f -exec ls -lh {} \;
 
       - name: Debug- show build output
         run: ls -la build/web || true
