@@ -299,7 +299,7 @@ debug_color = Color(0, 0, 0, 0.42)
 
 [node name="CollectibleItem" parent="." instance=ExtResource("12_ieihp")]
 position = Vector2(4355, 2294)
-next_scene = "uid://btjgnbhq8dry0"
+next_scene = "uid://niarks21l4u"
 item = SubResource("Resource_5tk77")
 collected_dialogue = ExtResource("14_cpagv")
 
