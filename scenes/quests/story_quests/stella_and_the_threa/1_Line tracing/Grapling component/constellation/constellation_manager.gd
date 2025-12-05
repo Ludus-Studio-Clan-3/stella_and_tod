@@ -16,7 +16,7 @@ var can_draw: bool = false
 var current_index: int = 0
 
 # references nodes
-@onready var collect_root = $"../CollectSymbols" if has_node("../CollectSymbols") else $CollectSymbols
+@onready var collect_root =$"../CollectSymbols" if has_node("../CollectSymbols") else $CollectSymbols
 @onready var levers_root = $"../Levers"
 @onready var sky_root = $"../SkyRoot"
 @onready var lines_root = $"../SkyRoot"

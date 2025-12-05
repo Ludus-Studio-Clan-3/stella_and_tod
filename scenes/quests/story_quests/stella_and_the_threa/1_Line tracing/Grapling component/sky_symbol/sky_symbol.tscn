@@ -2,9 +2,10 @@
 
 [ext_resource type="Script" uid="uid://bvivrff737aop" path="res://scenes/quests/story_quests/stella_and_the_threa/1_Line tracing/Grapling component/sky_symbol/sky_symbol.gd" id="1_bntye"]
 [ext_resource type="Texture2D" uid="uid://du5hte20pbsn2" path="res://scenes/quests/story_quests/stella_and_the_threa/1_Line tracing/Grapling component/Glowind sign.png" id="2_6g6xc"]
-[ext_resource type="Texture2D" uid="uid://bmdu3gs8j1igu" path="res://assets/first_party/particles/circle.png" id="3_jmp37"]
+[ext_resource type="Texture2D" uid="uid://dphe64ephi5rk" path="res://scenes/quests/story_quests/stella_and_the_threa/1_Line tracing/Grapling component/light/star_05.png" id="3_jmp37"]
 
 [node name="SkySymbol" type="Node2D"]
+z_index = 100
 script = ExtResource("1_bntye")
 
 [node name="Sprite" type="Sprite2D" parent="."]

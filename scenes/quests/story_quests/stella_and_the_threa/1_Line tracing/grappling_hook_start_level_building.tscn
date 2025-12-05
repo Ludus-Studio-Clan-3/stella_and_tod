@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://bwcuy77472ucc"]
+[gd_scene load_steps=34 format=4 uid="uid://bwcuy77472ucc"]
 
 [ext_resource type="Script" uid="uid://cnms2rb3dmr8w" path="res://scenes/quests/story_quests/stella_and_the_threa/1_Line tracing/grappling_hook_start.gd" id="1_k2wth"]
 [ext_resource type="PackedScene" uid="uid://2rbpl811wlv1" path="res://scenes/game_elements/props/background_music/background_music.tscn" id="2_0vskb"]
@@ -12,6 +12,7 @@
 [ext_resource type="TileSet" uid="uid://dqgu6djvo02wp" path="res://scenes/quests/story_quests/stella_and_the_threa/tiles/stella_and_the_threa_elevation_without_top.tres" id="10_qy60d"]
 [ext_resource type="PackedScene" uid="uid://iu2q66clupc6" path="res://scenes/game_elements/characters/player/player.tscn" id="11_fvxi2"]
 [ext_resource type="PackedScene" uid="uid://evb46lm6ssu2" path="res://scenes/game_elements/props/hookable_pin/hookable_pin.tscn" id="12_7y0qv"]
+[ext_resource type="Texture2D" uid="uid://ey84iwvtv81n" path="res://scenes/quests/story_quests/stella_and_the_threa/1_Line tracing/Grapling component/light/circle_05.png" id="13_0kigi"]
 [ext_resource type="PackedScene" uid="uid://fuhl3l6gxq5k" path="res://scenes/game_elements/props/collectible_item/collectible_item.tscn" id="13_bnod1"]
 [ext_resource type="Script" uid="uid://bgmwplmj3bfls" path="res://scenes/globals/game_state/inventory/inventory_item.gd" id="14_5bw2p"]
 [ext_resource type="PackedScene" uid="uid://covsdqqsd6rsy" path="res://scenes/game_elements/props/sign/sign.tscn" id="15_n0m0f"]
@@ -25,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://c3ogyjgse3bgd" path="res://scenes/quests/story_quests/stella_and_the_threa/1_Line tracing/fog/fog.tscn" id="23_0lklm"]
 [ext_resource type="PackedScene" uid="uid://bw0y2potqde8l" path="res://scenes/quests/story_quests/stella_and_the_threa/1_Line tracing/Grapling component/lever/Lever.tscn" id="24_0kigi"]
 [ext_resource type="PackedScene" uid="uid://du3l0dkw7ckhn" path="res://scenes/quests/story_quests/stella_and_the_threa/1_Line tracing/Grapling component/collect_symbol/collect_symbol.tscn" id="24_pfrl2"]
+[ext_resource type="PackedScene" uid="uid://by10wlrbikowt" path="res://scenes/quests/story_quests/stella_and_the_threa/1_Line tracing/Grapling component/constellation/constellation_manager.tscn" id="27_87ruy"]
 
 [sub_resource type="Animation" id="Animation_w67qe"]
 length = 0.001
@@ -98,13 +100,21 @@ type = 1
 metadata/_custom_type_script = "uid://bgmwplmj3bfls"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f18wf"]
-size = Vector2(181.5, 317)
+size = Vector2(181.5, 547)
 
 [node name="GrapplingHookStart" type="Node2D"]
 script = ExtResource("1_k2wth")
 
 [node name="BackgroundMusic" parent="." instance=ExtResource("2_0vskb")]
 stream = ExtResource("3_pfrl2")
+
+[node name="SkyRoot" type="Node2D" parent="."]
+z_index = 100
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.19434926, 0.19434929, 0.1943492, 1)
+
+[node name="Fog" parent="." instance=ExtResource("23_0lklm")]
 
 [node name="Cinematic" type="Node2D" parent="." node_paths=PackedStringArray("animation_player")]
 script = ExtResource("4_0kigi")
@@ -144,7 +154,7 @@ y_sort_enabled = true
 
 [node name="Player" parent="OnTheGround" instance=ExtResource("11_fvxi2")]
 unique_name_in_owner = true
-position = Vector2(2514, 558)
+position = Vector2(133, 546)
 mode = 2
 
 [node name="Camera2D" type="Camera2D" parent="OnTheGround/Player"]
@@ -152,6 +162,11 @@ limit_left = -16
 limit_top = -561
 limit_right = 5864
 limit_bottom = 1644
+
+[node name="Light2" type="PointLight2D" parent="OnTheGround/Player"]
+color = Color(0.74839693, 0.9744342, 0.8531744, 1)
+texture = ExtResource("13_0kigi")
+texture_scale = 2.5
 
 [node name="Pins" type="Node2D" parent="OnTheGround"]
 
@@ -161,6 +176,9 @@ position = Vector2(2003, 549)
 [node name="HookablePin5" parent="OnTheGround/Pins" instance=ExtResource("12_7y0qv")]
 position = Vector2(2388, 538)
 
+[node name="HookablePin15" parent="OnTheGround/Pins" instance=ExtResource("12_7y0qv")]
+position = Vector2(2225, 533)
+
 [node name="HookablePin14" parent="OnTheGround/Pins" instance=ExtResource("12_7y0qv")]
 position = Vector2(2518, 269)
 
@@ -169,6 +187,21 @@ position = Vector2(2585, 431)
 
 [node name="HookablePin24" parent="OnTheGround/Pins" instance=ExtResource("12_7y0qv")]
 position = Vector2(2534, -270)
+
+[node name="HookablePin25" parent="OnTheGround/Pins" instance=ExtResource("12_7y0qv")]
+position = Vector2(2534, -225)
+
+[node name="HookablePin26" parent="OnTheGround/Pins" instance=ExtResource("12_7y0qv")]
+position = Vector2(2507, -203)
+
+[node name="HookablePin27" parent="OnTheGround/Pins" instance=ExtResource("12_7y0qv")]
+position = Vector2(2449, -192)
+
+[node name="HookablePin28" parent="OnTheGround/Pins" instance=ExtResource("12_7y0qv")]
+position = Vector2(2408, -137)
+
+[node name="HookablePin29" parent="OnTheGround/Pins" instance=ExtResource("12_7y0qv")]
+position = Vector2(1852, 628)
 
 [node name="HookablePin6" parent="OnTheGround/Pins" instance=ExtResource("12_7y0qv")]
 position = Vector2(2793, 560)
@@ -202,6 +235,18 @@ position = Vector2(654, 549)
 
 [node name="HookablePin11" parent="OnTheGround/Pins" instance=ExtResource("12_7y0qv")]
 position = Vector2(790, 314)
+
+[node name="HookablePin17" parent="OnTheGround/Pins" instance=ExtResource("12_7y0qv")]
+position = Vector2(884, 192)
+
+[node name="HookablePin32" parent="OnTheGround/Pins" instance=ExtResource("12_7y0qv")]
+position = Vector2(1235, -76)
+
+[node name="HookablePin30" parent="OnTheGround/Pins" instance=ExtResource("12_7y0qv")]
+position = Vector2(1022, 316)
+
+[node name="HookablePin31" parent="OnTheGround/Pins" instance=ExtResource("12_7y0qv")]
+position = Vector2(824, 452)
 
 [node name="HookablePin12" parent="OnTheGround/Pins" instance=ExtResource("12_7y0qv")]
 position = Vector2(1153, 437)
@@ -257,7 +302,7 @@ direction = 1
 text = "Third line drawing"
 
 [node name="Sign7" parent="OnTheGround" instance=ExtResource("15_n0m0f")]
-position = Vector2(4416, 282)
+position = Vector2(4024, 431)
 scale = Vector2(1.03448, 1)
 direction = 1
 text = "Maybe final line drawing section"
@@ -275,14 +320,14 @@ position = Vector2(1965, 518)
 script = ExtResource("16_sd75p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="OnTheGround/Player_mode_changer2"]
-position = Vector2(2283, 22.5)
+position = Vector2(2283, 21.5)
 shape = SubResource("RectangleShape2D_f18wf")
 
 [node name="HookableNeedle" parent="OnTheGround" instance=ExtResource("17_as3jx")]
-position = Vector2(1162, 585)
+position = Vector2(951, 84)
 
 [node name="HookableNeedle2" parent="OnTheGround" instance=ExtResource("17_as3jx")]
-position = Vector2(1173, 520)
+position = Vector2(1072, -20)
 
 [node name="HoockableNeedes" type="Node2D" parent="OnTheGround"]
 
@@ -346,27 +391,34 @@ text = "Aim"
 
 [node name="First_step_enygma" type="Node2D" parent="All mystic rocks"]
 
-[node name="Fog" parent="." instance=ExtResource("23_0lklm")]
-visible = false
-
 [node name="Levers" type="Node2D" parent="."]
 
 [node name="Lever" parent="Levers" instance=ExtResource("24_0kigi")]
 position = Vector2(4250, 540)
 
-[node name="CollectibleSymbols" type="Node2D" parent="."]
+[node name="Lever2" parent="Levers" instance=ExtResource("24_0kigi")]
+position = Vector2(4236, 676)
 
-[node name="CollectSymbol" parent="CollectibleSymbols" instance=ExtResource("24_pfrl2")]
+[node name="Lever3" parent="Levers" instance=ExtResource("24_0kigi")]
+position = Vector2(4227, 363)
+
+[node name="CollectSymbols" type="Node2D" parent="."]
+
+[node name="CollectSymbol" parent="CollectSymbols" instance=ExtResource("24_pfrl2")]
 position = Vector2(1528, 508)
 
-[node name="CollectSymbol3" parent="CollectibleSymbols" instance=ExtResource("24_pfrl2")]
+[node name="CollectSymbol3" parent="CollectSymbols" instance=ExtResource("24_pfrl2")]
 position = Vector2(1993, 1221)
 
-[node name="CollectSymbol4" parent="CollectibleSymbols" instance=ExtResource("24_pfrl2")]
+[node name="CollectSymbol4" parent="CollectSymbols" instance=ExtResource("24_pfrl2")]
 position = Vector2(3712, 531)
 
-[node name="CollectSymbol2" parent="CollectibleSymbols" instance=ExtResource("24_pfrl2")]
+[node name="CollectSymbol2" parent="CollectSymbols" instance=ExtResource("24_pfrl2")]
 position = Vector2(1851, -265)
+
+[node name="ConstellationManager" parent="." instance=ExtResource("27_87ruy")]
+sky_center = Vector2(4500, 720)
+sky_radius = 700.0
 
 [connection signal="body_entered" from="OnTheGround/Player_mode_changer" to="OnTheGround/Player_mode_changer" method="_on_body_entered"]
 [connection signal="body_exited" from="OnTheGround/Player_mode_changer" to="OnTheGround/Player_mode_changer" method="_on_body_exited"]

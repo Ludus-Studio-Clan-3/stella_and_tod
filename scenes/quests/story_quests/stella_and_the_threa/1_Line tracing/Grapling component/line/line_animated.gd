@@ -6,7 +6,7 @@ extends Node2D
 @export var circle_radius: float = 60.0
 @export var circle_color: Color = Color.WHITE
 
-@export var hand_draw_strength: float = 0.5
+@export var hand_draw_strength: float = 0.6 
 
 var progress := 0.0
 var line_points := []

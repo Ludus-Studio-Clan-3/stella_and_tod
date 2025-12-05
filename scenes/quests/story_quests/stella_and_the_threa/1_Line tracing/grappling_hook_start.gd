@@ -14,5 +14,5 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	fog_density = clamp(fog_density + delta * 0.02 , 0.0, 5.0)
+	fog_density = clamp(fog_density + delta * 0.02 , 0.0, 3.0)
 	fog_mat.set_shader_parameter("density", fog_density)   

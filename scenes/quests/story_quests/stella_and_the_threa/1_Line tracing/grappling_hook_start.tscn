@@ -107,10 +107,12 @@ script = ExtResource("1_kbsq0")
 [node name="BackgroundMusic" parent="." instance=ExtResource("1_f18wf")]
 stream = ExtResource("2_34w5w")
 
-[node name="Fog" parent="." instance=ExtResource("16_kbsq0")]
-
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0.19434926, 0.19434929, 0.1943492, 1)
+
+[node name="Fog" parent="." instance=ExtResource("16_kbsq0")]
+visible = false
 
 [node name="Cinematic" type="Node2D" parent="." node_paths=PackedStringArray("animation_player")]
 script = ExtResource("3_kbsq0")
@@ -161,6 +163,7 @@ limit_right = 3465
 limit_bottom = 1598
 
 [node name="Light" type="PointLight2D" parent="OnTheGround/Player"]
+visible = false
 color = Color(0.74839693, 0.9744342, 0.8531744, 1)
 texture = ExtResource("13_ddf1x")
 texture_scale = 2.5
