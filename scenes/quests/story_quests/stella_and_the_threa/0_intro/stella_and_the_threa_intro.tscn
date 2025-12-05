@@ -514,7 +514,7 @@ position = Vector2(235, -57)
 script = ExtResource("4_x6ak6")
 dialogue = ExtResource("5_hodai")
 animation_player = NodePath("../OnTheGround/AnimationPlayer")
-next_scene = "uid://brx3883i4vvwu"
+next_scene = "uid://bwcuy77472ucc"
 metadata/_custom_type_script = "uid://x1mxt6bmei2o"
 
 [node name="Trees" type="Node2D" parent="."]

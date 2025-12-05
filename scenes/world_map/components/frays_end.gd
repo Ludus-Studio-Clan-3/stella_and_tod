@@ -12,4 +12,5 @@ func _ready() -> void:
 
 
 func _update_story_quest_progress_visibility(_new_items: Array[InventoryItem] = []) -> void:
-	hud.change_story_quest_progress_visibility(eternal_loom.is_item_offering_possible())
+	if eternal_loom:
+		hud.change_story_quest_progress_visibility(eternal_loom.is_item_offering_possible())

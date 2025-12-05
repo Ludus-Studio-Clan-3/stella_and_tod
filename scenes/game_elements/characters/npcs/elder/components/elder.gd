@@ -32,9 +32,9 @@ var _storybook: Storybook
 func _ready() -> void:
 	if Engine.is_editor_hint():
 		return
-
-	if self not in eternal_loom.elders:
-		eternal_loom.elders.append(self)
+	if eternal_loom:
+		if self not in eternal_loom.elders:
+			eternal_loom.elders.append(self)
 
 	talk_behavior.before_dialogue = _before_dialogue
 	interact_area.interaction_ended.connect(_on_interaction_ended)

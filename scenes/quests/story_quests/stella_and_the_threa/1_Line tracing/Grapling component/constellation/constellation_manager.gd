@@ -15,6 +15,7 @@ var sky_symbols: Array = []    # instances SkySymbol (ordre = collect_order)
 var can_draw: bool = false
 var current_index: int = 0
 
+
 # references nodes
 @onready var collect_root =$"../CollectSymbols" if has_node("../CollectSymbols") else $CollectSymbols
 @onready var levers_root = $"../Levers"
@@ -22,6 +23,7 @@ var current_index: int = 0
 @onready var lines_root = $"../SkyRoot"
 # debug
 @onready var debug_label = get_node_or_null("DebugLabel")
+@onready var specialNeedle = $"../OnTheGround/HoockableNeedes/SpecialNeedle"
 
 func _ready():
 	# Connect collect symbols
@@ -31,24 +33,34 @@ func _ready():
 
 	# Connect levers
 	for l in levers_root.get_children():
-		if l.has_signal("lever_activated"):
-			l.connect("lever_activated", Callable(self, "_on_lever_activated"))
+		if l.has_signal("toggled"):
+			l.connect("toggled", Callable(self, "_on_lever_toggled"))
 
 	#just for debug
 	if debug_label:
 		debug_label.text = "Collect 0/" + str(collect_root.get_child_count())
 
+func _on_lever_toggled(is_on: bool):
+	if not is_on:
+		return
+
+	_on_lever_activated()
+	
 # --- collecte ---
 func _on_collect_symbol(symbol_node):
-	print('_on_collect_symbol')
 	if symbol_node in collect_order:      
 		return
 	collect_order.append(symbol_node)
 	_update_debug()
-	# if all symbols collected -> build sky
+	var level_manager = get_tree().get_first_node_in_group("LevelManager")
+	if level_manager:
+		level_manager.reduce_fog_smooth(0.6, 3.0)
 	
+	# if all symbols collected -> build sky
 	if collect_order.size() == 4 :
-		print("can_draw")
+		if specialNeedle:
+			specialNeedle.visible = true
+			
 		can_draw = true
 		_build_sky_symbols()
 
@@ -72,7 +84,7 @@ func _generate_positions(n: int) -> Array:
 		var start = -PI/2 - spread/2
 		for i in range(n):
 			var t = float(i) / max(1, n-1)
-			var angle = start + t * spread + randf_range(-0.12, 0.12)
+			var angle = start + t * spread + randf_range(-0.12,    0.12)
 			var r = sky_radius * randf_range(0.9, 1.1)
 			res.append(sky_center + Vector2(cos(angle), sin(angle)) * r)
 		return res
@@ -161,7 +173,10 @@ func _on_lever_activated():
 
 # ---  (Line2D with) ---
 func _create_animated_line(a: Vector2, b: Vector2):
-	print('create_animated_line')
+	var level_manager = get_tree().get_first_node_in_group("LevelManager")
+	if level_manager:
+		level_manager.desable_fog_smooth(0.3, 1.5)
+		
 	var line_anim = preload("uid://cidb76x5gqoj6").instantiate()
 	line_anim.start_point = a
 	line_anim.end_point = b
@@ -173,6 +188,7 @@ func _create_animated_line(a: Vector2, b: Vector2):
 func _on_line_tween_finished(line):
 	print('_on_line_tween_finished')
 	var sfx = AudioStreamPlayer2D.new()
+	
 	sfx.stream = preload("res://assets/third_party/nepalese_hand_bells/handBells-f4.ogg")
 	add_child(sfx)
 	sfx.play()
@@ -181,6 +197,9 @@ func _on_line_tween_finished(line):
 func _on_constellation_complete():
 	print("Constellation complète !")
 	# final animation
+	var memoire = $"../OnTheGround/CollectibleItem"
+	if memoire:
+		memoire.visible = true
 	for s in sky_symbols:
 		if s.has_method("light_up"):
 			s.light_up()
