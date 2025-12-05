@@ -504,6 +504,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
+scale = Vector2(0.575, 0.575)
 collision_mask = 531
 motion_mode = 1
 wall_min_slide_angle = 0.017453292

@@ -243,8 +243,8 @@ offset = Vector2(377.88, 10.7686)
 script = ExtResource("4_lptvm")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="DetectionArea"]
-position = Vector2(-35.425743, -67.227104)
-scale = Vector2(0.9412087, 0.56333727)
+position = Vector2(-47, -76)
+scale = Vector2(1.175, 0.703)
 polygon = PackedVector2Array(302, 48, 283, 52, 278.81778, 43.006393, 101, 114, 98, 114, 79, 124, 77, 124, 72, 131, 71, 131, 71, 138, 78, 145, 78, 146, 95, 154, 95, 155, 275, 226, 275, 227, 292.62982, 236.49617, 289.3333, 222, 312, 230, 316, 230, 330, 222, 332, 222, 340, 214, 341, 214, 346, 205, 347, 205, 351, 185, 351, 100, 347, 82, 347, 79, 338, 67, 338, 65, 325, 55, 325, 54, 302, 47)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
