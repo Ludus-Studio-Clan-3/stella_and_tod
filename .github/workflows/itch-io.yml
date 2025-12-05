@@ -3,12 +3,12 @@
 name: "Publish to Itch.io"
 
 on:
-  # push:
-    # branches: [main]
+  push:
+    branches: [main]
   workflow_dispatch: # enable manual trigger
 
 env:
-  EXPORT_NAME: stella-and-the-threads-of-dawn
+  EXPORT_NAME: modded-platformer-demo
   GODOT_VERSION: 4.4.1
 
 jobs:
@@ -19,7 +19,7 @@ jobs:
       image: barichello/godot-ci:4.4.1
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v5
 
       - name: Cache Godot export templates
         uses: actions/cache@v4
@@ -47,9 +47,6 @@ jobs:
         run: |
           mkdir -p build/web
           godot -v --headless --export-release "Web" build/web/index.html
-          # Ensure all files are included
-          echo "Checking web build contents:"
-          find build/web -type f -exec ls -lh {} \;
 
       - name: Debug- show build output
         run: ls -la build/web || true
@@ -58,7 +55,7 @@ jobs:
         uses: actions/upload-artifact@v5
         with:
           name: web
-          path: build/web
+          path: project/build/web
 
       - name: Publish to itch.io
         uses: KikimoraGames/itch-publish@v0.0.3
