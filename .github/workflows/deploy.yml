@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: The Threadbare Authors
 # SPDX-License-Identifier: MPL-2.0
 
-name: "Publish to Itch.io"
+name: "Publish to Itch.io: Refined"
 
 on:
   workflow_dispatch:   # Manual trigger only
