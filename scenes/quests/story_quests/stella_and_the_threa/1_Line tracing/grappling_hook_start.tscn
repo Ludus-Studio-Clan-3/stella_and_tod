@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://brx3883i4vvwu"]
+[gd_scene load_steps=33 format=4 uid="uid://brx3883i4vvwu"]
 
 [ext_resource type="PackedScene" uid="uid://2rbpl811wlv1" path="res://scenes/game_elements/props/background_music/background_music.tscn" id="1_f18wf"]
 [ext_resource type="Script" uid="uid://cnms2rb3dmr8w" path="res://scenes/quests/story_quests/stella_and_the_threa/1_Line tracing/grappling_hook_start.gd" id="1_kbsq0"]
@@ -12,6 +12,7 @@
 [ext_resource type="TileSet" uid="uid://dqgu6djvo02wp" path="res://scenes/quests/story_quests/stella_and_the_threa/tiles/stella_and_the_threa_elevation_without_top.tres" id="9_beje3"]
 [ext_resource type="PackedScene" uid="uid://iu2q66clupc6" path="res://scenes/game_elements/characters/player/player.tscn" id="10_upmbx"]
 [ext_resource type="PackedScene" uid="uid://evb46lm6ssu2" path="res://scenes/game_elements/props/hookable_pin/hookable_pin.tscn" id="12_ocaj0"]
+[ext_resource type="Texture2D" uid="uid://ey84iwvtv81n" path="res://scenes/quests/story_quests/stella_and_the_threa/1_Line tracing/Grapling component/light/circle_05.png" id="13_ddf1x"]
 [ext_resource type="PackedScene" uid="uid://fuhl3l6gxq5k" path="res://scenes/game_elements/props/collectible_item/collectible_item.tscn" id="13_oop60"]
 [ext_resource type="Script" uid="uid://bgmwplmj3bfls" path="res://scenes/globals/game_state/inventory/inventory_item.gd" id="14_6aqe0"]
 [ext_resource type="PackedScene" uid="uid://covsdqqsd6rsy" path="res://scenes/game_elements/props/sign/sign.tscn" id="15_h8ix0"]
@@ -106,6 +107,11 @@ script = ExtResource("1_kbsq0")
 [node name="BackgroundMusic" parent="." instance=ExtResource("1_f18wf")]
 stream = ExtResource("2_34w5w")
 
+[node name="Fog" parent="." instance=ExtResource("16_kbsq0")]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.19434926, 0.19434929, 0.1943492, 1)
+
 [node name="Cinematic" type="Node2D" parent="." node_paths=PackedStringArray("animation_player")]
 script = ExtResource("3_kbsq0")
 dialogue = ExtResource("4_r1u5x")
@@ -153,6 +159,11 @@ limit_left = -9
 limit_top = -191
 limit_right = 3465
 limit_bottom = 1598
+
+[node name="Light" type="PointLight2D" parent="OnTheGround/Player"]
+color = Color(0.74839693, 0.9744342, 0.8531744, 1)
+texture = ExtResource("13_ddf1x")
+texture_scale = 2.5
 
 [node name="Pins" type="Node2D" parent="OnTheGround"]
 
@@ -293,8 +304,6 @@ text = "Aim"
 [node name="All mystic rocks" type="Node2D" parent="."]
 
 [node name="First_step_enygma" type="Node2D" parent="All mystic rocks"]
-
-[node name="Fog" parent="." instance=ExtResource("16_kbsq0")]
 
 [node name="SkyRoot" type="Node2D" parent="."]
 
