@@ -15,14 +15,10 @@ func _ready():
 		glow.energy = 0.0
 
 func light_up():
-	print('light up method')
 	var tween = create_tween()
 	if spr:
-		print("spr")
 		tween.tween_property(spr, "modulate:a", 1.0, sparkle_duration).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
 	if glow:
-		print("glow")
 		tween.tween_property(glow, "energy", 1.5, sparkle_duration).set_trans(Tween.TRANS_SINE)
 	if sfx:
-		print("sfx")
 		sfx.play()

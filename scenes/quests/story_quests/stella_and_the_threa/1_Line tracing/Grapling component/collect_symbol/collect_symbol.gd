@@ -18,7 +18,6 @@ func _on_body_entered(body):
 	if not body or not body.is_in_group("player"):
 		return
 
-	print('picked ', id)
 	picked = true
 	sprite.modulate = Color(0.827, 0.353, 0.157, 1.0)
 	if $CollectParticles:

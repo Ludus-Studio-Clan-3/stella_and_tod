@@ -70,7 +70,6 @@ func _update_debug():
 
 # --- psitions ---
 func _generate_positions(n: int) -> Array:
-	print('_generate_positions')
 	var res := []
 	if placement_mode == "circle":
 		for i in range(n):
@@ -99,7 +98,6 @@ func _generate_positions(n: int) -> Array:
 
 # --- build SkySymbols place them in the collect_order order ---
 func _build_sky_symbols():
-	print("_build_sky_symbols")
 	# clean the sky, just in case
 	for child in sky_root.get_children():
 		child.queue_free()
@@ -108,61 +106,31 @@ func _build_sky_symbols():
 	var n = collect_order.size()
 	var positions = _generate_positions(n)
 
-	print('postinons ', positions)
-	print('taille = ', n)
 	for i in range(n):
 		var sky_inst = sky_symbol_scene.instantiate()
 		sky_inst.global_position = positions[i]
 		
 		sky_inst.set_meta("collected_ref", collect_order[i])
-		print("sky_inst", sky_inst)
-		print('')
 		sky_root.add_child(sky_inst)
 		sky_symbols.append(sky_inst)
-		print("sky_root", sky_root.get_children())
-		print('sky_root_size', sky_root.get_children().size())
-		print("sky_symbols", sky_symbols)        
-	
-	#just for test need to be deleted
-	#_on_lever_activated()
-
+	   
 
 # --- trace the next ligne ---
 func _on_lever_activated():
-	print('on_lever_activated')
 	if not can_draw:
-		# feedback
-		print("Constellation still locked.")
 		return
 	if current_index >= sky_symbols.size() - 1:
-		print("all lignes traced.")
 		return
 
 	var A = sky_symbols[current_index]
 	var B = sky_symbols[current_index + 1]
-	
-	print("")
-	print("")
-	print("A = ", A)
-	print("A.global_position = ", A.global_position)
-	print("")
-	print("B.global_position = ", B.global_position)
-	"""
-	var line := Line2D.new()
-	line.width = 4
-	line.default_color = Color.WHITE
-	line.points = [A.global_position, B.global_position]
 
-	get_tree().current_scene.add_child(line)
-	"""
 	
 	_create_animated_line(A.global_position, B.global_position)
 	# light up symbols
 	if A.has_method("light_up"):
-		print('A.light-up')
 		A.light_up()
 	if B.has_method("light_up"):
-		print('B.light-up')
 		B.light_up()
 
 	current_index += 1
@@ -186,7 +154,6 @@ func _create_animated_line(a: Vector2, b: Vector2):
 
 
 func _on_line_tween_finished(line):
-	print('_on_line_tween_finished')
 	var sfx = AudioStreamPlayer2D.new()
 	
 	sfx.stream = preload("res://assets/third_party/nepalese_hand_bells/handBells-f4.ogg")
@@ -195,7 +162,6 @@ func _on_line_tween_finished(line):
 	sfx.connect("finished", Callable(sfx, "queue_free"))
 
 func _on_constellation_complete():
-	print("Constellation complète !")
 	# final animation
 	var memoire = $"../OnTheGround/CollectibleItem"
 	if memoire:
