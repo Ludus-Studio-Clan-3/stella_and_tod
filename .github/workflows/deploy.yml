@@ -4,7 +4,9 @@
 name: "Publish to Itch.io: Refined"
 
 on:
-  workflow_dispatch:   # Manual trigger only
+  push:
+    branches: [development]
+  workflow_dispatch: # Manual trigger only
 
 env:
   EXPORT_NAME: modded-platformer-demo
