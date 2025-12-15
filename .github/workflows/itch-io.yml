@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v5
 
       - name: Cache Godot export templates
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ~/.local/share/godot/export_templates
           key: godot-templates-${{ env.GODOT_VERSION }}-${{ runner.os }}-${{ hashFiles('.github/workflows/godot-ci.yml') }}
